@@ -2,7 +2,7 @@
 const PRODUCTS = [
   // --- 1. عطور أوريجنال - رجالي ---
   {
-    image: "images/img_002.jpg",
+    image: "batch1_images/img_002.jpg",
     id: "RH-0001",
     name: "أرماف أوديسي ماندارين سكاي",
     brand: "Armaf",
@@ -15,7 +15,7 @@ const PRODUCTS = [
     desc: "توليفة منعشة وفخمة من الحمضيات مع لمسات الفانيلا وخشب الأرز والعنب."
   },
   {
-    image: "images/img_003.jpg",
+    image: "batch1_images/img_003.jpg",
     id: "RH-0012",
     name: "أرماف أوديسي ميجا ليمتد إيديشن",
     brand: "Armaf",
@@ -28,7 +28,7 @@ const PRODUCTS = [
     desc: "إصدار خاص بطابع أروماتك رجالي يجمع الفواكه والأخشاب والمسك الفاخر."
   },
   {
-    image: "images/img_004.jpg",
+    image: "batch1_images/img_004.jpg",
     id: "RH-0013",
     name: "أرماف أوديسي ماندارين سكاي إليكسير",
     brand: "Armaf",
@@ -41,7 +41,7 @@ const PRODUCTS = [
     desc: "تركيز أعمق وأقوى لماندارين سكاي بثبات عالي وحضور طاغٍ."
   },
   {
-    image: "images/img_005.jpg",
+    image: "batch1_images/img_005.jpg",
     id: "RH-0018",
     name: "جوتشي جيلتي إليكسير دو بارفام بور أوم",
     brand: "Smart Collection 30 ml",
@@ -54,7 +54,7 @@ const PRODUCTS = [
     desc: "عطر كلاسيكي جذاب يجمع بين الفانيلا والتوابل والزهور الشرقية."
   },
   {
-    image: "images/img_006.jpg",
+    image: "batch1_images/img_006.jpg",
     id: "RH-0019",
     name: "إيف سان لوران ماي سيلف أو دو بارفان",
     brand: "Smart Collection 30 ml",
@@ -67,7 +67,7 @@ const PRODUCTS = [
     desc: "عطر الرجل العصري الأنيق بنفحات زهر البرتقال والباتشولي المنعش."
   },
   {
-    image: "images/img_007.jpg",
+    image: "batch1_images/img_007.jpg",
     id: "RH-0020",
     name: "لويس فويتون إيماجينيشن",
     brand: "Smart Collection 30 ml",
@@ -80,7 +80,7 @@ const PRODUCTS = [
     desc: "أيقونة الانتعاش مع الشاي الأسود والحمضيات النبيلة والزنجبيل الفاخر."
   },
   {
-    image: "images/img_008.jpg",
+    image: "batch1_images/img_008.jpg",
     id: "RH-0022",
     name: "رابان إنفيكتوس أو دو بارفان",
     brand: "Smart Collection 30 ml",
@@ -93,7 +93,7 @@ const PRODUCTS = [
     desc: "عطر البطولة والجاذبية بنفحات بحرية منعشة وقاعدة خشبية صلبة."
   },
   {
-    image: "images/img_009.jpg",
+    image: "batch1_images/img_009.jpg",
     id: "RH-0023",
     name: "إمبوريو أرماني سترونجر ويذ يو أو دو بارفان",
     brand: "Smart Collection 30 ml",
@@ -106,7 +106,7 @@ const PRODUCTS = [
     desc: "مزيج دافئ ومغري من الكستناء والفانيلا مع التوابل العطرية."
   },
   {
-    image: "images/img_010.jpg",
+    image: "batch1_images/img_010.jpg",
     id: "RH-0025",
     name: "جان بول جوتييه ألترا ميل أو دو بارفان إنتنس",
     brand: "Smart Collection 30 ml",
@@ -119,7 +119,7 @@ const PRODUCTS = [
     desc: "عطر السهرات الشهير بقنبلة الكمثرى والفانيلا والقرفة الجريئة."
   },
   {
-    image: "images/img_011.jpg",
+    image: "batch1_images/img_011.jpg",
     id: "RH-0031",
     name: "وايلد كولد أو دو بارفان",
     brand: "Vitality Professional",
@@ -132,7 +132,7 @@ const PRODUCTS = [
     desc: "انتعاش مائي قوي يمنحك طاقة وحيوية تدوم طوال اليوم."
   },
   {
-    image: "images/img_012.jpg",
+    image: "batch1_images/img_012.jpg",
     id: "RH-0034",
     name: "ذا إترنال كلوب — 200 مل",
     brand: "MPF",
@@ -145,7 +145,7 @@ const PRODUCTS = [
     desc: "حجم عملاق 200 مل برائحة خشبية أروماتك تفيض بالرجولة والفخامة."
   },
   {
-    image: "images/img_013.jpg",
+    image: "batch1_images/img_013.jpg",
     id: "RH-0053",
     name: "لمسة إمبيريوس 100 مل أو دو بارفان",
     brand: "Prime Collection by Sterling",
@@ -158,7 +158,7 @@ const PRODUCTS = [
     desc: "عطر يومي متوازن يجمع الخشب والحمضيات والتوابل الراقية."
   },
   {
-    image: "images/img_014.jpg",
+    image: "batch1_images/img_014.jpg",
     id: "RH-0054",
     name: "أسير 100 مل أو دو بارفان",
     brand: "Prime Collection by Sterling",
@@ -171,7 +171,7 @@ const PRODUCTS = [
     desc: "رائحة نضرة تجمع النسيم البحري والفواكه والأخشاب الهادئة."
   },
   {
-    image: "images/img_015.jpg",
+    image: "batch1_images/img_015.jpg",
     id: "RH-0055",
     name: "كافيه نوار",
     brand: "Riffs Perfumes",
@@ -184,7 +184,7 @@ const PRODUCTS = [
     desc: "إيحاءات القهوة الفاخرة والنوتات الدافئة لعشاق التميز في الأمسيات."
   },
   {
-    image: "images/img_016.jpg",
+    image: "batch1_images/img_016.jpg",
     id: "RH-0085",
     name: "الرحاب أمير 50 مل",
     brand: "Al Rehab",
@@ -197,7 +197,7 @@ const PRODUCTS = [
     desc: "عطر شرقي عربي أصيل يجمع بين خشب الصندل والعنبر والتراب العطري."
   },
   {
-    image: "images/img_017.jpg",
+    image: "batch1_images/img_017.jpg",
     id: "RH-0089",
     name: "الرحاب بلو نايت 50 مل",
     brand: "Al Rehab",
@@ -210,7 +210,7 @@ const PRODUCTS = [
     desc: "ليلة زرقاء ساحرة تجمع بين الأخشاب العطرية والتوابل الشرقية."
   },
   {
-    image: "images/img_018.jpg",
+    image: "batch1_images/img_018.jpg",
     id: "RH-0090",
     name: "الرحاب ال فارس 50 مل",
     brand: "Al Rehab",
@@ -223,7 +223,7 @@ const PRODUCTS = [
     desc: "عطر الفروسية والأناقة برائحة شرقية فاخرة وثبات ممتد."
   },
   {
-    image: "images/img_019.jpg",
+    image: "batch1_images/img_019.jpg",
     id: "RH-0092",
     name: "الرحاب روضة طيبة 50 مل",
     brand: "Al Rehab",
@@ -236,7 +236,7 @@ const PRODUCTS = [
     desc: "نفحات روحانية دافئة من الجلود المعتقة والفانيلا والتوابل الأصيلة."
   },
   {
-    image: "images/img_020.jpg",
+    image: "batch1_images/img_020.jpg",
     id: "RH-0108",
     name: "أسد 30 مل",
     brand: "Ex Perfume 30 ml",
@@ -251,7 +251,7 @@ const PRODUCTS = [
 
   // --- 2. عطور أوريجنال - نسائي وللجنسين ---
   {
-    image: "images/img_021.jpg",
+    image: "batch1_images/img_021.jpg",
     id: "RH-0014",
     name: "أرماف أوديسي كاندي سبيشال إيديشن",
     brand: "Armaf",
@@ -264,7 +264,7 @@ const PRODUCTS = [
     desc: "إصدار سكاكر زهري ساحر مفعم بالحيوية والأنوثة الجذابة."
   },
   {
-    image: "images/img_022.jpg",
+    image: "batch1_images/img_022.jpg",
     id: "RH-0015",
     name: "أرماف أوديسي مارشميلو",
     brand: "Armaf",
@@ -277,7 +277,7 @@ const PRODUCTS = [
     desc: "رائحة المارشميلو السكرية الناعمة مع لمسات فانيلا وفواكه لا تقاوم."
   },
   {
-    image: "images/img_023.jpg",
+    image: "batch1_images/img_023.jpg",
     id: "RH-0016",
     name: "أرماف أوديسي ليموني",
     brand: "Armaf",
@@ -290,7 +290,7 @@ const PRODUCTS = [
     desc: "انتعاش الحمضيات المنقية والأعشاب الخضراء لمظهر صيفي مشرق."
   },
   {
-    image: "images/img_024.jpg",
+    image: "batch1_images/img_024.jpg",
     id: "RH-0017",
     name: "أرماف أوديسي جو مانجو",
     brand: "Armaf",
@@ -303,7 +303,7 @@ const PRODUCTS = [
     desc: "توليفة استوائية فريدة مع المانجو الناضج والفانيلا والتوابل الخفيفة."
   },
   {
-    image: "images/img_025.jpg",
+    image: "batch1_images/img_025.jpg",
     id: "RH-0021",
     name: "كريد سيلفر ماونتن ووتر",
     brand: "Smart Collection 30 ml",
@@ -316,7 +316,7 @@ const PRODUCTS = [
     desc: "نقاء الهواء في قمم الجبال الجليدية مع الشاي الأخضر والكشمش الأسود."
   },
   {
-    image: "images/img_026.jpg",
+    image: "batch1_images/img_026.jpg",
     id: "RH-0024",
     name: "كيليان أنجلز شير أو دو بارفان",
     brand: "Smart Collection 30 ml",
@@ -329,7 +329,7 @@ const PRODUCTS = [
     desc: "فخامة الكونياك مع القرفة وحبوب التونكا وخشب البلوط."
   },
   {
-    image: "images/img_027.jpg",
+    image: "batch1_images/img_027.jpg",
     id: "RH-0026",
     name: "ميزون فرانسيس كوركدجيان باكارات روج 540",
     brand: "Smart Collection 30 ml",
@@ -342,7 +342,7 @@ const PRODUCTS = [
     desc: "العطر الأسطوري الأشهر عالمياً بعبير الزعفران وخشب الأرز والعنبر الكريستالي."
   },
   {
-    image: "images/img_028.jpg",
+    image: "batch1_images/img_028.jpg",
     id: "RH-0028",
     name: "دريم لاورين 100 مل أو دو بارفان",
     brand: "Vitality Collection",
@@ -355,7 +355,7 @@ const PRODUCTS = [
     desc: "باقة رقيقة تلائم المرأة الحالمة بنعومة الزهور البيضاء والمسك."
   },
   {
-    image: "images/img_029.jpg",
+    image: "batch1_images/img_029.jpg",
     id: "RH-0029",
     name: "قصة فلورا 100 مل أو دو بارفان",
     brand: "Vitality Professional",
@@ -368,7 +368,7 @@ const PRODUCTS = [
     desc: "قصة أنثوية ساحرة تُروى من خلال أزهار الربيع والفاكهة اللذيذة."
   },
   {
-    image: "images/img_030.jpg",
+    image: "batch1_images/img_030.jpg",
     id: "RH-0030",
     name: "تارا 100 مل أو دو بارفان",
     brand: "Vitality Professional",
@@ -381,7 +381,7 @@ const PRODUCTS = [
     desc: "توليفة راقية تعكس النعومة والانتعاش بثبات ممتاز طوال اليوم."
   },
   {
-    image: "images/img_031.jpg",
+    image: "batch1_images/img_031.jpg",
     id: "RH-0032",
     name: "بينك جيرل 100 مل أو دو بارفان",
     brand: "Vitality Professional",
@@ -394,7 +394,7 @@ const PRODUCTS = [
     desc: "عطر مفعم بالبهجة والجاذبية للبنات والفتيات بإحساس السكر والورود."
   },
   {
-    image: "images/img_032.jpg",
+    image: "batch1_images/img_032.jpg",
     id: "RH-0033",
     name: "ميس فلاور 100 مل أو دو بارفان",
     brand: "Vitality Professional",
@@ -407,7 +407,7 @@ const PRODUCTS = [
     desc: "مزيج زهور رقيق يمنحك حضوراً هادئاً ولمسة من العنبر الدافئ."
   },
   {
-    image: "images/img_033.jpg",
+    image: "batch1_images/img_033.jpg",
     id: "RH-0050",
     name: "جراندور لو نويت",
     brand: "Milestone",
@@ -420,7 +420,7 @@ const PRODUCTS = [
     desc: "عطر ليلي فخم يجمع النضارة مع عمق الأخشاب والزهور النادرة."
   },
   {
-    image: "images/img_034.jpg",
+    image: "batch1_images/img_034.jpg",
     id: "RH-0051",
     name: "سولاس 100 مل أو دو بارفان",
     brand: "Prime Collection by Sterling",
@@ -433,7 +433,7 @@ const PRODUCTS = [
     desc: "رائحة دافئة من العنبر والأخشاب النبيلة مع لمسات توابل هادئة."
   },
   {
-    image: "images/img_035.jpg",
+    image: "batch1_images/img_035.jpg",
     id: "RH-0057",
     name: "ستيفان أومبير لوكاس جود أوف فاير",
     brand: "Smart Collection 30 ml",
@@ -446,7 +446,7 @@ const PRODUCTS = [
     desc: "إله النار الأسطوري بنوتة المانجو الاستوائي المدخن والزنجبيل والعود."
   },
   {
-    image: "images/img_036.jpg",
+    image: "batch1_images/img_036.jpg",
     id: "RH-0083",
     name: "الرحاب فانتاستك 50 مل",
     brand: "Al Rehab",
@@ -459,7 +459,7 @@ const PRODUCTS = [
     desc: "عطر رائع وأنثوي للغاية بمزيج الفانيلا والزهور البيضاء والمسك."
   },
   {
-    image: "images/img_037.jpg",
+    image: "batch1_images/img_037.jpg",
     id: "RH-0084",
     name: "الرحاب توتي مسك 50 مل",
     brand: "Al Rehab",
@@ -472,7 +472,7 @@ const PRODUCTS = [
     desc: "انتعاش التوت البري والمسك النقي للمرأة الحيوية والأنيقة."
   },
   {
-    image: "images/img_038.jpg",
+    image: "batch1_images/img_038.jpg",
     id: "RH-0087",
     name: "الرحاب روح حياتي 50 مل",
     brand: "Al Rehab",
@@ -485,7 +485,7 @@ const PRODUCTS = [
     desc: "عبير مبهج يعكس بهجة الحياة بنفحات الفواكه المنعشة والزهور."
   },
   {
-    image: "images/img_039.jpg",
+    image: "batch1_images/img_039.jpg",
     id: "RH-0088",
     name: "الرحاب جلوينج نايت 50 مل",
     brand: "Al Rehab",
@@ -498,7 +498,7 @@ const PRODUCTS = [
     desc: "عطر ليلي دافئ بمزيج مغري من الفانيلا والسكر والعنبر."
   },
   {
-    image: "images/img_040.jpg",
+    image: "batch1_images/img_040.jpg",
     id: "RH-0093",
     name: "الرحاب المقام عود 50 مل",
     brand: "Al Rehab",
@@ -511,7 +511,7 @@ const PRODUCTS = [
     desc: "عود المقام المهيب بلمسة عصرية من الفانيلا والجلد الفاخر."
   },
   {
-    image: "images/img_041.jpg",
+    image: "batch1_images/img_041.jpg",
     id: "RH-0097",
     name: "إكلير 30 مل",
     brand: "Ex Perfume 30 ml",
@@ -524,7 +524,7 @@ const PRODUCTS = [
     desc: "حجم مدمج من عطر إكلير السويت اللذيذ بحلاوة الكراميل والفانيلا."
   },
   {
-    image: "images/img_042.jpg",
+    image: "batch1_images/img_042.jpg",
     id: "RH-0099",
     name: "أرابيان توباكو 30 مل",
     brand: "Ex Perfume 30 ml",
@@ -537,7 +537,7 @@ const PRODUCTS = [
     desc: "توباكو عربي فاخر مع التوابل والفانيلا الشرقية الدافئة."
   },
   {
-    image: "images/img_043.jpg",
+    image: "batch1_images/img_043.jpg",
     id: "RH-0101",
     name: "نبراس 30 مل",
     brand: "Ex Perfume 30 ml",
@@ -550,7 +550,7 @@ const PRODUCTS = [
     desc: "بديل بيلي إيليش الذهبي الساحر بنوتة الشوكولاتة والتوت والفانيلا."
   },
   {
-    image: "images/img_044.jpg",
+    image: "batch1_images/img_044.jpg",
     id: "RH-0102",
     name: "قائد الفرسان 30 مل",
     brand: "Ex Perfume 30 ml",
@@ -563,7 +563,7 @@ const PRODUCTS = [
     desc: "عطر الأناناس والعود الشهير بحجم اقتصادي ملائم لكل مكان."
   },
   {
-    image: "images/img_045.jpg",
+    image: "batch1_images/img_045.jpg",
     id: "RH-0103",
     name: "عود أبيض 30 مل",
     brand: "Ex Perfume 30 ml",
@@ -576,7 +576,7 @@ const PRODUCTS = [
     desc: "عود أبيض نقي وناعم يناسب الإطلالات الصباحية والمناسبات الراقية."
   },
   {
-    image: "images/img_046.jpg",
+    image: "batch1_images/img_046.jpg",
     id: "RH-0104",
     name: "رايف ناو بلاك 30 مل",
     brand: "Ex Perfume 30 ml",
@@ -589,7 +589,7 @@ const PRODUCTS = [
     desc: "انتعاش الأناناس والخشب المدخن بأداء ثابت ورائحة فواحة."
   },
   {
-    image: "images/img_047.jpg",
+    image: "batch1_images/img_047.jpg",
     id: "RH-0105",
     name: "حياتي 30 مل",
     brand: "Ex Perfume 30 ml",
@@ -602,7 +602,7 @@ const PRODUCTS = [
     desc: "رائحة الانتعاش المائي والفاكهي للشباب والفتيات بلمسة مسكية."
   },
   {
-    image: "images/img_048.jpg",
+    image: "batch1_images/img_048.jpg",
     id: "RH-0106",
     name: "عود مود 30 مل",
     brand: "Ex Perfume 30 ml",
@@ -615,7 +615,7 @@ const PRODUCTS = [
     desc: "الكراميل والعنبر والعود الدافئ لإحساس شتوي فخم ومريح."
   },
   {
-    image: "images/img_049.jpg",
+    image: "batch1_images/img_049.jpg",
     id: "RH-0107",
     name: "خمرة 30 مل",
     brand: "Ex Perfume 30 ml",
@@ -628,7 +628,7 @@ const PRODUCTS = [
     desc: "تحفة التوابل والقرفة والتمر والبرالين بالحجم المصغر العملي."
   },
   {
-    image: "images/img_050.jpg",
+    image: "batch1_images/img_050.jpg",
     id: "RH-0109",
     name: "بيور مسك 30 مل",
     brand: "Ex Perfume 30 ml",
@@ -641,7 +641,7 @@ const PRODUCTS = [
     desc: "مسك النظافة الأبيض بنقاء فائق ورائحة هادئة تلازمك ساعات طويلة."
   },
   {
-    image: "images/img_051.jpg",
+    image: "batch1_images/img_051.jpg",
     id: "RH-0482",
     name: "الرحاب ديالا 50 مل أو دو بارفان",
     brand: "Al Rehab",
@@ -654,7 +654,7 @@ const PRODUCTS = [
     desc: "رائحة ناعمة ومخملية تلائم الاستخدام اليومي بنفحات المسك والورد."
   },
   {
-    image: "images/img_052.jpg",
+    image: "batch1_images/img_052.jpg",
     id: "RH-0483",
     name: "بيريز ويك إند بينك إيديشن 30 مل",
     brand: "EX Parfum 30 ml",
@@ -667,7 +667,7 @@ const PRODUCTS = [
     desc: "إشراقة عطلة نهاية الأسبوع بالورود والبودرة الناعمة."
   },
   {
-    image: "images/img_053.jpg",
+    image: "batch1_images/img_053.jpg",
     id: "RH-0484",
     name: "الأبيض 30 مل أو دو بارفان",
     brand: "EX Parfum 30 ml",
@@ -680,7 +680,7 @@ const PRODUCTS = [
     desc: "تناغم جذاب من الزهور البيضاء والعنبر الفاخر بحجم خفيف."
   },
   {
-    image: "images/img_054.jpg",
+    image: "batch1_images/img_054.jpg",
     id: "RH-0485",
     name: "كيارا كاندي 100 مل أو دو بارفان",
     brand: "Prime Collection by Sterling",
@@ -695,7 +695,7 @@ const PRODUCTS = [
 
   // --- 3. عطور ميرور - رجالي ---
   {
-    image: "images/img_055.jpg",
+    image: "batch1_images/img_055.jpg",
     id: "RH-0110",
     name: "ديور سوفاج أو دو بارفان",
     brand: "Dior",
@@ -708,7 +708,7 @@ const PRODUCTS = [
     desc: "أعلى درجة ميرور لأيقونة الرجولة العالمية.. ثبات جبار ونقاء لا يضاهى."
   },
   {
-    image: "images/img_056.jpg",
+    image: "batch1_images/img_056.jpg",
     id: "RH-0111",
     name: "شانيل بلو دو شانيل أو دو بارفان",
     brand: "CHANEL",
@@ -721,7 +721,7 @@ const PRODUCTS = [
     desc: "العطر الأرستقراطي الأزرق الأنيق.. حضور راقٍ وجاذبية مطلقة."
   },
   {
-    image: "images/img_057.jpg",
+    image: "batch1_images/img_057.jpg",
     id: "RH-0114",
     name: "جان بول جوتييه سكاندل بور أوم لو بارفام",
     brand: "Jean Paul Gaultier",
@@ -734,7 +734,7 @@ const PRODUCTS = [
     desc: "عطر الملاكم الجريء بنوتة الكراميل المملح وحبوب التونكا وخشب نجيل الهند."
   },
   {
-    image: "images/img_058.jpg",
+    image: "batch1_images/img_058.jpg",
     id: "RH-0128",
     name: "إمبوريو أرماني سترونجر ويذ يو أبسولوتلي",
     brand: "Emporio Armani",
@@ -747,7 +747,7 @@ const PRODUCTS = [
     desc: "أقوى وأدفأ إصدارات سترونجر ويذ يو بنفحات الروم والفانيلا الجذابة."
   },
   {
-    image: "images/img_059.jpg",
+    image: "batch1_images/img_059.jpg",
     id: "RH-0138",
     name: "لطافة أسد إليكسير أو دو بارفان",
     brand: "Lattafa",
@@ -760,7 +760,7 @@ const PRODUCTS = [
     desc: "تركيز إكسير ثري يجمع التوابل الحارة والخشب والتبغ الدافئ."
   },
   {
-    image: "images/img_060.jpg",
+    image: "batch1_images/img_060.jpg",
     id: "RH-0139",
     name: "لطافة أسد زنجبار بلو",
     brand: "Lattafa",
@@ -773,7 +773,7 @@ const PRODUCTS = [
     desc: "إصدار زنجبار الأزرق بنكهة جوز الهند المنعشة والفلفل الأسود والفانيلا."
   },
   {
-    image: "images/img_061.jpg",
+    image: "batch1_images/img_061.jpg",
     id: "RH-0140",
     name: "لطافة أسد أو دو بارفان",
     brand: "Lattafa",
@@ -786,7 +786,7 @@ const PRODUCTS = [
     desc: "العطر الأكثر طلباً بديلاً لسوفاج إليكسير.. فوحان وثبات يدوم لأيام."
   },
   {
-    image: "images/img_062.jpg",
+    image: "batch1_images/img_062.jpg",
     id: "RH-0141",
     name: "لطافة أسد بوربون أو دو بارفان",
     brand: "Lattafa",
@@ -799,7 +799,7 @@ const PRODUCTS = [
     desc: "لمسة بوربون معتقة وغنية بالدفء لليالي الشتاء والمناسبات الخاصة."
   },
   {
-    image: "images/img_063.jpg",
+    image: "batch1_images/img_063.jpg",
     id: "RH-0143",
     name: "لطافة فخر بلاك",
     brand: "Lattafa",
@@ -812,7 +812,7 @@ const PRODUCTS = [
     desc: "بديل إيف سان لوران Y EDP الشهير.. قمة الانتعاش والتفاح الأخضر."
   },
   {
-    image: "images/img_064.jpg",
+    image: "batch1_images/img_064.jpg",
     id: "RH-0150",
     name: "لطافة خمرة دخان أو دو بارفان",
     brand: "Lattafa",
@@ -825,7 +825,7 @@ const PRODUCTS = [
     desc: "إصدار دخاني غامض وفاخر يمزج التمر والتوابل واللمسات الدخانية الراقية."
   },
   {
-    image: "images/img_065.jpg",
+    image: "batch1_images/img_065.jpg",
     id: "RH-0165",
     name: "كريد أفينتوس",
     brand: "Creed",
@@ -838,7 +838,7 @@ const PRODUCTS = [
     desc: "ملك العطور الرجالية.. الأناناس المدخن والبتولا والعنبر الملكي."
   },
   {
-    image: "images/img_066.jpg",
+    image: "batch1_images/img_066.jpg",
     id: "RH-0174",
     name: "رابان إنفيكتوس أو دو بارفان",
     brand: "Rabanne",
@@ -851,7 +851,7 @@ const PRODUCTS = [
     desc: "الكأس الذهبي للجاذبية بنفحات بحرية منعشة وخشب الغاياك."
   },
   {
-    image: "images/img_067.jpg",
+    image: "batch1_images/img_067.jpg",
     id: "RH-0191",
     name: "فيرساتشي إيروس",
     brand: "Versace",
@@ -864,7 +864,7 @@ const PRODUCTS = [
     desc: "رمز الإغراء الإيطالي بالنعناع المنعش والتفاح الأخضر والفانيلا الساحرة."
   },
   {
-    image: "images/img_068.jpg",
+    image: "batch1_images/img_068.jpg",
     id: "RH-0194",
     name: "مون بلان ليجند نايت",
     brand: "Montblanc",
@@ -877,7 +877,7 @@ const PRODUCTS = [
     desc: "عطر رجالي دافئ وأنيق بنفحات الفانيلا والهيل والتفاح الهادئ."
   },
   {
-    image: "images/img_069.jpg",
+    image: "batch2_images/img_069.jpg",
     id: "RH-0195",
     name: "مون بلان ليجند أو دو بارفان",
     brand: "Montblanc",
@@ -890,7 +890,7 @@ const PRODUCTS = [
     desc: "الكلاسيكية الأنيقة بتركيز بارفان يدوم لساعات طويلة من التألق."
   },
   {
-    image: "images/img_070.jpg",
+    image: "batch2_images/img_070.jpg",
     id: "RH-0212",
     name: "جان بول جوتييه ألترا ميل",
     brand: "Jean Paul Gaultier",
@@ -903,7 +903,7 @@ const PRODUCTS = [
     desc: "أشهر عطور الخروج والسهرات الرجالية بإجماع عشاق العطور في العالم."
   },
   {
-    image: "images/img_071.jpg",
+    image: "batch2_images/img_071.jpg",
     id: "RH-0217",
     name: "رابان 1 مليون إليكسير بارفام إنتنس",
     brand: "Rabanne",
@@ -916,7 +916,7 @@ const PRODUCTS = [
     desc: "السبيكة الذهبية بنفحات التفاح والدافانا والفانيلا السوداء الثرية."
   },
   {
-    image: "images/img_072.jpg",
+    image: "batch2_images/img_072.jpg",
     id: "RH-0231",
     name: "جورجيو أرماني أرماني كود بروفومو",
     brand: "Giorgio Armani",
@@ -929,7 +929,7 @@ const PRODUCTS = [
     desc: "قمة الجاذبية الشرقية مع حبوب التونكا والعنبر وجوزة الطيب."
   },
   {
-    image: "images/img_073.jpg",
+    image: "batch2_images/img_073.jpg",
     id: "RH-0233",
     name: "جورجيو أرماني أكوا دي جيو أو دو بارفان",
     brand: "Giorgio Armani",
@@ -942,7 +942,7 @@ const PRODUCTS = [
     desc: "الانتعاش الإيطالي الأسطوري من نسيم البحر المتوسط واليوسفي الأخضر."
   },
   {
-    image: "images/img_074.jpg",
+    image: "batch2_images/img_074.jpg",
     id: "RH-0234",
     name: "جورجيو أرماني أكوا دي جيو بروفومو بارفام",
     brand: "Giorgio Armani",
@@ -955,7 +955,7 @@ const PRODUCTS = [
     desc: "تلاقي أمواج البحر الباردة مع الصخور البركانية والبخور الفاخر."
   },
   {
-    image: "images/img_075.jpg",
+    image: "batch2_images/img_075.jpg",
     id: "RH-0249",
     name: "لاكوست إل 12.12 بلان أو دو بارفان",
     brand: "Lacoste",
@@ -968,7 +968,7 @@ const PRODUCTS = [
     desc: "قميص البولو الأبيض النظيف.. عطر النظافة والانتعاش الرياضي الأنيق."
   },
   {
-    image: "images/img_076.jpg",
+    image: "batch2_images/img_076.jpg",
     id: "RH-0258",
     name: "كارولينا هيريرا باد بوي",
     brand: "Carolina Herrera",
@@ -981,7 +981,7 @@ const PRODUCTS = [
     desc: "صاعقة الجاذبية بالكاكاو وحبوب التونكا والفلفل الأبيض والأسود."
   },
   {
-    image: "images/img_077.jpg",
+    image: "batch2_images/img_077.jpg",
     id: "RH-0270",
     name: "فالنتينو أومو بورن إن روما أو دو بارفان",
     brand: "Valentino",
@@ -994,7 +994,7 @@ const PRODUCTS = [
     desc: "أناقة شوارع روما القديمة بأوراق البنفسج والملح المعدني والزنجبيل."
   },
   {
-    image: "images/img_078.jpg",
+    image: "batch2_images/img_078.jpg",
     id: "RH-0279",
     name: "لطافة اعترافه",
     brand: "Lattafa",
@@ -1007,7 +1007,7 @@ const PRODUCTS = [
     desc: "تحفة العطور الشرقية في زجاجة تمثال فاخرة تأسر القلوب."
   },
   {
-    image: "images/img_079.jpg",
+    image: "batch2_images/img_079.jpg",
     id: "RH-0287",
     name: "إمبوريو أرماني سترونجر ويذ يو إنتنسلي",
     brand: "Emporio Armani",
@@ -1020,7 +1020,7 @@ const PRODUCTS = [
     desc: "العطر الأكثر طلباً شتاءً برائحة التوفي والقرفة والفانيلا الدافئة."
   },
   {
-    image: "images/img_080.jpg",
+    image: "batch2_images/img_080.jpg",
     id: "RH-0325",
     name: "أمواج إنترلود مان",
     brand: "Amouage",
@@ -1033,7 +1033,7 @@ const PRODUCTS = [
     desc: "المعروف بـ 'الوحش الأزرق'.. فوحان هائل من اللبان العُماني والجلود والعود."
   },
   {
-    image: "images/img_081.jpg",
+    image: "batch2_images/img_081.jpg",
     id: "RH-0470",
     name: "جورجيو أرماني أكوا دي جيو بروفوندو 100 مل",
     brand: "Giorgio Armani",
@@ -1046,7 +1046,7 @@ const PRODUCTS = [
     desc: "غوص عميق في زرقة المحيط بأملاح البحر واليوسفي والباتشولي الباتارد."
   },
   {
-    image: "images/img_082.jpg",
+    image: "batch2_images/img_082.jpg",
     id: "RH-0489",
     name: "دولتشي آند جابانا ذا ون للرجال أو دو بارفان 100 مل",
     brand: "Dolce&Gabbana",
@@ -1059,7 +1059,7 @@ const PRODUCTS = [
     desc: "عطر المواعيد الراقية بالتبغ الفاخر والعنبر والهيل والزنجبيل الدافئ."
   },
   {
-    image: "images/img_083.jpg",
+    image: "batch2_images/img_083.jpg",
     id: "RH-0491",
     name: "كارولينا هيريرا 212 في آي بي مين 100 مل",
     brand: "Carolina Herrera",
@@ -1072,7 +1072,7 @@ const PRODUCTS = [
     desc: "حفلات نيويورك الحصرية بنوتة الباشن فروت والزنجبيل والنعناع الفوار."
   },
   {
-    image: "images/img_084.jpg",
+    image: "batch2_images/img_084.jpg",
     id: "RH-0493",
     name: "كارولينا هيريرا 212 في آي بي بلاك 100 مل",
     brand: "Carolina Herrera",
@@ -1085,7 +1085,7 @@ const PRODUCTS = [
     desc: "رائحة الأفسنتين واليانسون مع اللافندر والفانيلا السوداء لغموض جذاب."
   },
   {
-    image: "images/img_085.jpg",
+    image: "batch2_images/img_085.jpg",
     id: "RH-0497",
     name: "أصداف أمير العرب إمبريوم 100 مل",
     brand: "Asdaaf",
@@ -1098,7 +1098,7 @@ const PRODUCTS = [
     desc: "إمبراطورية الفخامة الشرقية بحضور ملكي منعش وثبات قوي."
   },
   {
-    image: "images/img_086.jpg",
+    image: "batch2_images/img_086.jpg",
     id: "RH-0498",
     name: "جيفنشي جنتلمان أو دو بارفان بوازيه 100 مل",
     brand: "Givenchy",
@@ -1111,7 +1111,7 @@ const PRODUCTS = [
     desc: "أناقة السوسن البودري مع خشب الصندل والكاكاو والباتشولي الخلاب."
   },
   {
-    image: "images/img_087.jpg",
+    image: "batch2_images/img_087.jpg",
     id: "RH-0499",
     name: "برادا باراديجم أو دو بارفان 100 مل",
     brand: "Prada",
@@ -1124,7 +1124,7 @@ const PRODUCTS = [
     desc: "عطر يجسد التناقضات العصرية بتناغم المسك والعنبر الأخضر المنعش."
   },
   {
-    image: "images/img_088.jpg",
+    image: "batch2_images/img_088.jpg",
     id: "RH-0500",
     name: "إمبوريو أرماني سترونجر ويذ يو فريز 100 مل",
     brand: "Emporio Armani",
@@ -1137,7 +1137,7 @@ const PRODUCTS = [
     desc: "انتعاش الجليد والتفاح والزنجبيل مع قاعدة سترونجر ويذ يو الكلاسيكية."
   },
   {
-    image: "images/img_089.jpg",
+    image: "batch2_images/img_089.jpg",
     id: "RH-0502",
     name: "ديور فهرنهايت أو دو بارفان 100 مل",
     brand: "Dior",
@@ -1150,7 +1150,7 @@ const PRODUCTS = [
     desc: "الأسطورة الخالدة من الجلود والبنفسج والبرغموت.. بصمة تميز لا تتكرر."
   },
   {
-    image: "images/img_090.jpg",
+    image: "batch2_images/img_090.jpg",
     id: "RH-0507",
     name: "بوس ذا سينت إليكسير بارفام إنتنس 100 مل",
     brand: "BOSS",
@@ -1163,7 +1163,7 @@ const PRODUCTS = [
     desc: "عطر الإغراء المركز من هوجو بوس بخشب الصندل واللافندر الحار."
   },
   {
-    image: "images/img_091.jpg",
+    image: "batch2_images/img_091.jpg",
     id: "RH-0509",
     name: "ديور هوم إنتنس أو دو بارفان 100 مل",
     brand: "Dior",
@@ -1176,7 +1176,7 @@ const PRODUCTS = [
     desc: "العطر النيش الأيقوني بالسوسن التوسكاني والكاكاو والمسك المخملي."
   },
   {
-    image: "images/img_092.jpg",
+    image: "batch2_images/img_092.jpg",
     id: "RH-0511",
     name: "رابان إنفيكتوس أو دو بارفان 100 مل",
     brand: "Rabanne",
@@ -1189,7 +1189,7 @@ const PRODUCTS = [
     desc: "طاقة لا متناهية من نسيم البحر المالح والياسمين وأخشاب الغاياك."
   },
   {
-    image: "images/img_093.jpg",
+    image: "batch2_images/img_093.jpg",
     id: "RH-0512",
     name: "رابان مليون جولد أو دو بارفام إنتنس 100 مل",
     brand: "Rabanne",
@@ -1204,7 +1204,7 @@ const PRODUCTS = [
 
   // --- 4. عطور ميرور - نسائي وللجنسين ---
   {
-    image: "images/img_094.jpg",
+    image: "batch2_images/img_094.jpg",
     id: "RH-0112",
     name: "جان بول جوتييه سكاندل أو دو بارفان",
     brand: "Jean Paul Gaultier",
@@ -1217,7 +1217,7 @@ const PRODUCTS = [
     desc: "عسل مغري مع الغردينيا والدم البرتقالي والباتشولي لأنوثة طاغية."
   },
   {
-    image: "images/img_095.jpg",
+    image: "batch2_images/img_095.jpg",
     id: "RH-0129",
     name: "كيالي يم بوجي مارشميلو 81 إنتنس",
     brand: "KAYALI",
@@ -1230,7 +1230,7 @@ const PRODUCTS = [
     desc: "عطر حلويات فاخر برائحة المارشميلو الوردية وغزل البنات والفراولة."
   },
   {
-    image: "images/img_096.jpg",
+    image: "batch2_images/img_096.jpg",
     id: "RH-0133",
     name: "كيالي عودجازم سموكي عود 07 أو دو بارفان",
     brand: "KAYALI",
@@ -1243,7 +1243,7 @@ const PRODUCTS = [
     desc: "عود دخاني مكثف مع الزعفران والباتشولي والفانيلا الراقية."
   },
   {
-    image: "images/img_097.jpg",
+    image: "batch2_images/img_097.jpg",
     id: "RH-0134",
     name: "كيالي فانيلا كاندي روك شوجر 42 أو دو بارفان",
     brand: "KAYALI",
@@ -1256,7 +1256,7 @@ const PRODUCTS = [
     desc: "قنبلة الفانيلا وسكر النبات والعلكة الفقاعية مع لمسة خشبية ناعمة."
   },
   {
-    image: "images/img_098.jpg",
+    image: "batch2_images/img_098.jpg",
     id: "RH-0135",
     name: "لطافة يارا أو دو بارفان",
     brand: "Lattafa",
@@ -1269,7 +1269,7 @@ const PRODUCTS = [
     desc: "العطر الوردي الأشهر عالمياً.. نعومة المارشميلو والماندرين وخشب الصندل."
   },
   {
-    image: "images/img_099.jpg",
+    image: "batch2_images/img_099.jpg",
     id: "RH-0136",
     name: "لطافة يارا كاندي",
     brand: "Lattafa",
@@ -1282,7 +1282,7 @@ const PRODUCTS = [
     desc: "إصدار الكاندي المبهج برائحة الكشمش الأحمر والحلوى والورود."
   },
   {
-    image: "images/img_100.jpg",
+    image: "batch2_images/img_100.jpg",
     id: "RH-0137",
     name: "لطافة يارا إليكسير أو دو بارفان",
     brand: "Lattafa",
@@ -1295,7 +1295,7 @@ const PRODUCTS = [
     desc: "أغمق وأكثر إثارة وتركيزاً لعائلة يارا المحبوبة."
   },
   {
-    image: "images/img_101.jpg",
+    image: "batch2_images/img_101.jpg",
     id: "RH-0142",
     name: "لطافة إكلير",
     brand: "Lattafa",
@@ -1308,7 +1308,7 @@ const PRODUCTS = [
     desc: "بديل عطر بيانكو لاتيه الساحر.. كراميل حليبي وعسل وفانيلا ناعمة."
   },
   {
-    image: "images/img_102.jpg",
+    image: "batch2_images/img_102.jpg",
     id: "RH-0144",
     name: "لطافة فخر جولد إكستريت دو بارفام",
     brand: "Lattafa",
@@ -1321,7 +1321,7 @@ const PRODUCTS = [
     desc: "الفخامة الذهبية بمزيج التيوبروز والياسمين وخشب الكشمير."
   },
   {
-    image: "images/img_103.jpg",
+    image: "batch2_images/img_103.jpg",
     id: "RH-0145",
     name: "لطافة بديع العود سابلايم ريد",
     brand: "Lattafa",
@@ -1334,7 +1334,7 @@ const PRODUCTS = [
     desc: "بديل كيالي إيدن جوسي آبل.. تفاح أحمر شهي مع الليتشي والتوت وخشب الورد."
   },
   {
-    image: "images/img_104.jpg",
+    image: "batch2_images/img_104.jpg",
     id: "RH-0146",
     name: "لطافة بديع العود أميثيست بربل",
     brand: "Lattafa",
@@ -1347,7 +1347,7 @@ const PRODUCTS = [
     desc: "بديل إنيشيو أوتوميك روز.. ورود تركية وبلغارية مع العود النبيل."
   },
   {
-    image: "images/img_105.jpg",
+    image: "batch2_images/img_105.jpg",
     id: "RH-0147",
     name: "لطافة خمرة أو دو بارفان",
     brand: "Lattafa",
@@ -1360,7 +1360,7 @@ const PRODUCTS = [
     desc: "العطر الأكثر مبيعاً في الشرق الأوسط.. القرفة وحلوى التمر والبرالين."
   },
   {
-    image: "images/img_106.jpg",
+    image: "batch2_images/img_106.jpg",
     id: "RH-0149",
     name: "لطافة خمرة قهوة أو دو بارفان",
     brand: "Lattafa",
@@ -1373,7 +1373,7 @@ const PRODUCTS = [
     desc: "لمسة القهوة العربية المحمصة مع حلاوة خمرة الفاخرة."
   },
   {
-    image: "images/img_107.jpg",
+    image: "batch2_images/img_107.jpg",
     id: "RH-0151",
     name: "لطافة خمرة قهوة أو دو بارفان (نسخة فاخرة)",
     brand: "Lattafa",
@@ -1386,7 +1386,7 @@ const PRODUCTS = [
     desc: "إصدار خاص فخم بتغليف وتركيز عالي لمحبي اقتناء التحف."
   },
   {
-    image: "images/img_108.jpg",
+    image: "batch2_images/img_108.jpg",
     id: "RH-0156",
     name: "عساف وايلد كولت 200 مل",
     brand: "Assaf",
@@ -1399,7 +1399,7 @@ const PRODUCTS = [
     desc: "العطر السعودي الأسطوري الذي أحدث ضجة.. بخور ورماد وجلود وعنبر."
   },
   {
-    image: "images/img_109.jpg",
+    image: "batch2_images/img_109.jpg",
     id: "RH-0158",
     name: "قصة إمبريال فالي 200 مل",
     brand: "Qissah",
@@ -1412,7 +1412,7 @@ const PRODUCTS = [
     desc: "أيقونة البراند الكويتي قصة.. العود الجلدي والعنبر والبرغموت الفاخر."
   },
   {
-    image: "images/img_110.jpg",
+    image: "batch2_images/img_110.jpg",
     id: "RH-0161",
     name: "جورجيو أرماني سي باسيوني أو دو بارفان",
     brand: "Giorgio Armani",
@@ -1425,7 +1425,7 @@ const PRODUCTS = [
     desc: "القارورة الحمراء الشهيرة المليئة بالشغف.. كمثرى وكشمش أسود وفلفل وردي."
   },
   {
-    image: "images/img_111.jpg",
+    image: "batch2_images/img_111.jpg",
     id: "RH-0168",
     name: "توم فورد توباكو فاني",
     brand: "Tom Ford",
@@ -1438,7 +1438,7 @@ const PRODUCTS = [
     desc: "أفخم عطور النيش في العالم.. أوراق التبغ الفاخر وحبوب التونكا والفانيلا."
   },
   {
-    image: "images/img_112.jpg",
+    image: "batch2_images/img_112.jpg",
     id: "RH-0170",
     name: "توم فورد بلاك أوركيد",
     brand: "Tom Ford",
@@ -1451,7 +1451,7 @@ const PRODUCTS = [
     desc: "سحر الأوركيد الأسود والكمأة والشكولاتة الداكنة لجاذبية غامضة."
   },
   {
-    image: "images/img_113.jpg",
+    image: "batch2_images/img_113.jpg",
     id: "RH-0177",
     name: "لافيرن سينس أو دو بارفان",
     brand: "Laverne",
@@ -1464,7 +1464,7 @@ const PRODUCTS = [
     desc: "عبير ناعم يوقظ الحواس بزهرة السوسن والمسك والبودرة الفرنسية."
   },
   {
-    image: "images/img_114.jpg",
+    image: "batch2_images/img_114.jpg",
     id: "RH-0180",
     name: "جيفنشي إريزيستبل أو دو بارفان",
     brand: "Givenchy",
@@ -1477,7 +1477,7 @@ const PRODUCTS = [
     desc: "عطر الجاذبية التي لا تقاوم بالورد الجذاب وخشب الأرز الخفيف."
   },
   {
-    image: "images/img_115.jpg",
+    image: "batch2_images/img_115.jpg",
     id: "RH-0181",
     name: "فيري إريزيستبل جيفنشي لانتنس",
     brand: "Givenchy",
@@ -1490,7 +1490,7 @@ const PRODUCTS = [
     desc: "نسخة مركزة وجريئة تتألق بالورود الداكنة والبرقوق والباتشولي."
   },
   {
-    image: "images/img_116.jpg",
+    image: "batch2_images/img_116.jpg",
     id: "RH-0190",
     name: "فيرساتشي برايت كريستال أو دو بارفان",
     brand: "Versace",
@@ -1503,7 +1503,7 @@ const PRODUCTS = [
     desc: "البلورة الوردية المتألقة بالرمان وزهرة اللوتس والفاوانيا المنعشة."
   },
   {
-    image: "images/img_117.jpg",
+    image: "batch2_images/img_117.jpg",
     id: "RH-0192",
     name: "فيرساتشي كريستال نوار أو دو بارفان",
     brand: "Versace",
@@ -1516,7 +1516,7 @@ const PRODUCTS = [
     desc: "البلورة السوداء الساحرة بجوز الهند والهيل والغردينيا الشرقية."
   },
   {
-    image: "images/img_118.jpg",
+    image: "batch2_images/img_118.jpg",
     id: "RH-0203",
     name: "إبراهيم القرشي فرنش توباكو",
     brand: "Ibrahim Al Qurashi",
@@ -1529,7 +1529,7 @@ const PRODUCTS = [
     desc: "توباكو فرنسي أنيق مع الباتشولي والزهور ولمسة فاكهية فاخرة."
   },
   {
-    image: "images/img_119.jpg",
+    image: "batch2_images/img_119.jpg",
     id: "RH-0204",
     name: "إبراهيم القرشي سبانيش توباكو",
     brand: "Ibrahim Al Qurashi",
@@ -1542,7 +1542,7 @@ const PRODUCTS = [
     desc: "توباكو إسباني معتق بالعنبر والفانيلا لعشاق الفخامة العربية."
   },
   {
-    image: "images/img_120.jpg",
+    image: "batch2_images/img_120.jpg",
     id: "RH-0209",
     name: "نيشان هاجيفات",
     brand: "NISHANE",
@@ -1555,7 +1555,7 @@ const PRODUCTS = [
     desc: "العطر التركي النيش الأقوى.. الأناناس والجريب فروت وطحلب البلوط."
   },
   {
-    image: "images/img_121.jpg",
+    image: "batch2_images/img_121.jpg",
     id: "RH-0219",
     name: "إيف سان لوران ليبر أو دو بارفان إنتنس",
     brand: "Yves Saint Laurent",
@@ -1568,7 +1568,7 @@ const PRODUCTS = [
     desc: "عطر المرأة الحرة القوية بنفحات اللافندر وزهر البرتقال والفانيلا الغنية."
   },
   {
-    image: "images/img_122.jpg",
+    image: "batch2_images/img_122.jpg",
     id: "RH-0240",
     name: "ميزون فرانسيس كوركدجيان باكارات روج 45 مل",
     brand: "Maison Francis Kurkdjian",
@@ -1581,7 +1581,7 @@ const PRODUCTS = [
     desc: "أعلى جودة ميرور لباكارات روج بنقائها الكريستالي الأحمر الآسر."
   },
   {
-    image: "images/img_123.jpg",
+    image: "batch2_images/img_123.jpg",
     id: "RH-0242",
     name: "بربري هير أو دو بارفان",
     brand: "Burberry",
@@ -1594,7 +1594,7 @@ const PRODUCTS = [
     desc: "سحر لندن بالفاكهة الحمراء والفراولة والتوت والمسك النظيف."
   },
   {
-    image: "images/img_124.jpg",
+    image: "batch2_images/img_124.jpg",
     id: "RH-0243",
     name: "بربري هير إنتنس أو دو بارفان",
     brand: "Burberry",
@@ -1607,7 +1607,7 @@ const PRODUCTS = [
     desc: "تركيز إنتنس أغنى بالفواكه الداكنة والياسمين وخشب البنزوين."
   },
   {
-    image: "images/img_125.jpg",
+    image: "batch2_images/img_125.jpg",
     id: "RH-0255",
     name: "نارسيسو رودريجيز أول أوف مي",
     brand: "Narciso Rodriguez",
@@ -1620,7 +1620,7 @@ const PRODUCTS = [
     desc: "ورد السنتيفوليا مع خشب الصندل والمسك الأبيض الخالص."
   },
   {
-    image: "images/img_126.jpg",
+    image: "batch2_images/img_126.jpg",
     id: "RH-0262",
     name: "إبراهيم القرشي بينك دايموند ساكورا 200 مل",
     brand: "Ibrahim Al Qurashi",
@@ -1633,7 +1633,7 @@ const PRODUCTS = [
     desc: "أزهار الكرز الياباني (ساكورا) في عبوة 200 مل عملاقة وفاخرة."
   },
   {
-    image: "images/img_127.jpg",
+    image: "batch2_images/img_127.jpg",
     id: "RH-0273",
     name: "فالنتينو دوننا بورن إن روما إنتنس",
     brand: "Valentino",
@@ -1646,7 +1646,7 @@ const PRODUCTS = [
     desc: "قمة الفخامة والأنوثة الجريئة.. فانيلا بوربون وياسمين ليلي دافئ."
   },
   {
-    image: "images/img_128.jpg",
+    image: "batch2_images/img_128.jpg",
     id: "RH-0274",
     name: "بيلي آيليش إيليش رقم 3 أو دو بارفان",
     brand: "Billie Eilish",
@@ -1659,7 +1659,7 @@ const PRODUCTS = [
     desc: "الإصدار الأحمر المثير بالزعفران والصنوبر والأخشاب النادرة."
   },
   {
-    image: "images/img_129.jpg",
+    image: "batch2_images/img_129.jpg",
     id: "RH-0275",
     name: "بيلي آيليش إيليش أو دو بارفان (الذهبي)",
     brand: "Billie Eilish",
@@ -1672,7 +1672,7 @@ const PRODUCTS = [
     desc: "التمثال الذهبي المحبوب عالمياً بالكاكاو الدافئ والفانيلا السكرية."
   },
   {
-    image: "images/img_130.jpg",
+    image: "batch2_images/img_130.jpg",
     id: "RH-0276",
     name: "لطافة أنا الأبيض",
     brand: "Lattafa",
@@ -1685,7 +1685,7 @@ const PRODUCTS = [
     desc: "بديل إربا بورا الفاخر.. سلة فواكه منعشة ومسك أبيض نقي لا يزول."
   },
   {
-    image: "images/img_131.jpg",
+    image: "batch2_images/img_131.jpg",
     id: "RH-0278",
     name: "لطافة ترياق",
     brand: "Lattafa",
@@ -1698,7 +1698,7 @@ const PRODUCTS = [
     desc: "ترياق السحر والجمال بمزيج الكراميل والعسل واللوز والمشمش."
   },
   {
-    image: "images/img_132.jpg",
+    image: "batch2_images/img_132.jpg",
     id: "RH-0280",
     name: "لطافة اعترافها",
     brand: "Lattafa",
@@ -1711,7 +1711,7 @@ const PRODUCTS = [
     desc: "عطر الأنوثة الملكية بالزهور البيضاء والمسك والبخور الهادئ."
   },
   {
-    image: "images/img_133.jpg",
+    image: "batch2_images/img_133.jpg",
     id: "RH-0285",
     name: "لطافة سكينة",
     brand: "Lattafa",
@@ -1724,7 +1724,7 @@ const PRODUCTS = [
     desc: "عطر البهجة والأنوثة.. الباشن فروت والماندرين وماء الورد والبرالين."
   },
   {
-    image: "images/img_134.jpg",
+    image: "batch2_images/img_134.jpg",
     id: "RH-0420",
     name: "عساف أروجيت بينك 200 مل",
     brand: "Assaf",
@@ -1737,7 +1737,7 @@ const PRODUCTS = [
     desc: "فخامة عساف الوردية بعبير الزهور والمسك في زجاجة 200 مل."
   },
   {
-    image: "images/img_135.jpg",
+    image: "batch2_images/img_135.jpg",
     id: "RH-0453",
     name: "هيرش لهب",
     brand: "Hersh",
@@ -1750,7 +1750,7 @@ const PRODUCTS = [
     desc: "لهيب التوابل العطرية مع الأخشاب والأعشاب النضرة."
   },
   {
-    image: "images/img_136.jpg",
+    image: "batch2_images/img_136.jpg",
     id: "RH-0469",
     name: "أورتو باريزي ميجامار بارفام 50 مل",
     brand: "Orto Parisi",
@@ -1763,7 +1763,7 @@ const PRODUCTS = [
     desc: "العطر البحري الأكثر ثباتاً في التاريخ.. أملاح المحيط والعنبر الخام."
   },
   {
-    image: "images/img_137.jpg",
+    image: "batch2_images/img_137.jpg",
     id: "RH-0478",
     name: "إبراهيم القرشي نود كورال دايموند 200 مل",
     brand: "Ibrahim Al Qurashi",
@@ -1776,7 +1776,7 @@ const PRODUCTS = [
     desc: "بريق الألماس المرجاني في عبوة كبيرة فاخرة تدوم طويلاً."
   },
   {
-    image: "images/img_138.jpg",
+    image: "batch2_images/img_138.jpg",
     id: "RH-0487",
     name: "عساف ميس فلورا 200 مل",
     brand: "Assaf",
@@ -1789,7 +1789,7 @@ const PRODUCTS = [
     desc: "حديقة أزهار متفتحة تمنحك إحساساً ملكياً بالنظافة والرقة."
   },
   {
-    image: "images/img_139.jpg",
+    image: "batch3_images/img_139.jpg",
     id: "RH-0488",
     name: "عساف ميس ساكورا 200 مل",
     brand: "Assaf",
@@ -1802,7 +1802,7 @@ const PRODUCTS = [
     desc: "أزهار الساكورا الرقيقة مع البودرة وخشب الصندل الدافئ."
   },
   {
-    image: "images/img_140.jpg",
+    image: "batch3_images/img_140.jpg",
     id: "RH-0490",
     name: "عساف أنجل أو دو بارفان 200 مل",
     brand: "Assaf",
@@ -1815,7 +1815,7 @@ const PRODUCTS = [
     desc: "الملاك الأبيض بنقاء الورود والزهور البيضاء والمسك الحريري."
   },
   {
-    image: "images/img_141.jpg",
+    image: "batch3_images/img_141.jpg",
     id: "RH-0492",
     name: "كارولينا هيريرا جود جيرل دازلنج جاردن 80 مل",
     brand: "Carolina Herrera",
@@ -1828,7 +1828,7 @@ const PRODUCTS = [
     desc: "الحذاء اللامع البنفسجي الشهير بالكاكاو واللوز والتيوبروز المغري."
   },
   {
-    image: "images/img_142.jpg",
+    image: "batch3_images/img_142.jpg",
     id: "RH-0494",
     name: "أصداف أميرة العرب أو دو بارفان 100 مل",
     brand: "Asdaaf",
@@ -1841,7 +1841,7 @@ const PRODUCTS = [
     desc: "عطر الأميرات بالزهور البيضاء والفاكهة الاستوائية والمسك العربي."
   },
   {
-    image: "images/img_143.jpg",
+    image: "batch3_images/img_143.jpg",
     id: "RH-0495",
     name: "جوتشي فلورا باي جوتشي 75 مل",
     brand: "Gucci",
@@ -1854,7 +1854,7 @@ const PRODUCTS = [
     desc: "أيقونة جوتشي الكلاسيكية بنفحات زهر الأوسمانثوس والفاوانيا واليوسفي."
   },
   {
-    image: "images/img_144.jpg",
+    image: "batch3_images/img_144.jpg",
     id: "RH-0496",
     name: "لطافة أمير العود إنتنس عود 100 مل",
     brand: "Lattafa",
@@ -1867,7 +1867,7 @@ const PRODUCTS = [
     desc: "بديل مايسون مارجيلا باي ذا فايربليس.. عود سكري مع فانيلا دافئة."
   },
   {
-    image: "images/img_145.jpg",
+    image: "batch3_images/img_145.jpg",
     id: "RH-0501",
     name: "كارولينا هيريرا جود جيرل ليجير 80 مل",
     brand: "Carolina Herrera",
@@ -1880,7 +1880,7 @@ const PRODUCTS = [
     desc: "إصدار خفيف ناعم مع لمسات حلوى الدولسي دي ليتشي والياسمين السامباك."
   },
   {
-    image: "images/img_146.jpg",
+    image: "batch3_images/img_146.jpg",
     id: "RH-0503",
     name: "إمبوريو أرماني سترونجر ويذ يو آمبر 100 مل",
     brand: "Emporio Armani",
@@ -1893,7 +1893,7 @@ const PRODUCTS = [
     desc: "العنبر الملكي مع اللافندر والفانيلا في زجاجة ذهبية تخطف الأنظار."
   },
   {
-    image: "images/img_147.jpg",
+    image: "batch3_images/img_147.jpg",
     id: "RH-0505",
     name: "لطافة ترياق إنتنس 100 مل",
     brand: "Lattafa",
@@ -1906,7 +1906,7 @@ const PRODUCTS = [
     desc: "نسخة أعمق وأقوى من ترياق بفوحان استثنائي."
   },
   {
-    image: "images/img_148.jpg",
+    image: "batch3_images/img_148.jpg",
     id: "RH-0506",
     name: "شانيل كوكو مادموزيل 100 مل",
     brand: "CHANEL",
@@ -1919,7 +1919,7 @@ const PRODUCTS = [
     desc: "رمز الأناقة الباريسية الأولى في العالم.. برتقال وورد وباتشولي لا يقاوم."
   },
   {
-    image: "images/img_149.jpg",
+    image: "batch3_images/img_149.jpg",
     id: "RH-0510",
     name: "دولتشي آند جابانا ذا أونلي ون 2 أو دو بارفام 100 مل",
     brand: "Dolce&Gabbana",
@@ -1934,7 +1934,7 @@ const PRODUCTS = [
 
   // --- 5. بدي سبراي ومعطرات الجسم ---
   {
-    image: "images/img_150.jpg",
+    image: "batch3_images/img_150.jpg",
     id: "RH-0002",
     name: "أرماف أوديسي ماندارين سكاي سبراي 200 مل",
     brand: "Armaf",
@@ -1947,7 +1947,7 @@ const PRODUCTS = [
     desc: "سبراي منعش للجسم بعد الشاور برائحة ماندارين سكاي المحبوبة."
   },
   {
-    image: "images/img_151.jpg",
+    image: "batch3_images/img_151.jpg",
     id: "RH-0003",
     name: "أرماف أوديسي ليموني بدي سبراي 200 مل",
     brand: "Armaf",
@@ -1960,7 +1960,7 @@ const PRODUCTS = [
     desc: "جرعة انتعاش فورية من الليمون والأعشاب الخضراء."
   },
   {
-    image: "images/img_152.jpg",
+    image: "batch3_images/img_152.jpg",
     id: "RH-0004",
     name: "أرماف أوديسي باهاماس 200 مل",
     brand: "Armaf",
@@ -1973,7 +1973,7 @@ const PRODUCTS = [
     desc: "أجواء جزر الباهاماس الاستوائية مع الفواكه والمسك المنعش."
   },
   {
-    image: "images/img_153.jpg",
+    image: "batch3_images/img_153.jpg",
     id: "RH-0005",
     name: "أرماف أوديسي جو مانجو 200 مل",
     brand: "Armaf",
@@ -1986,7 +1986,7 @@ const PRODUCTS = [
     desc: "رذاذ منعش برائحة المانجو الشهية والفانيلا الصيفية."
   },
   {
-    image: "images/img_154.jpg",
+    image: "batch3_images/img_154.jpg",
     id: "RH-0006",
     name: "أرماف أوديسي كاندي 200 مل",
     brand: "Armaf",
@@ -1999,7 +1999,7 @@ const PRODUCTS = [
     desc: "سبراي جسم بناتي حلو وخفيف يدوم طوال اليوم."
   },
   {
-    image: "images/img_155.jpg",
+    image: "batch3_images/img_155.jpg",
     id: "RH-0007",
     name: "أرماف أوديسي ميجا 200 مل",
     brand: "Armaf",
@@ -2012,7 +2012,7 @@ const PRODUCTS = [
     desc: "معطر جسم رجالي قوي يمنحك حضوراً وثقة طوال ساعات العمل والرياضة."
   },
   {
-    image: "images/img_156.jpg",
+    image: "batch3_images/img_156.jpg",
     id: "RH-0008",
     name: "أرماف أوديسي هوم وايت إيديشن 200 مل",
     brand: "Armaf",
@@ -2025,7 +2025,7 @@ const PRODUCTS = [
     desc: "نظافة وأناقة برائحة هادئة تناسب كافة الأوقات."
   },
   {
-    image: "images/img_157.jpg",
+    image: "batch3_images/img_157.jpg",
     id: "RH-0009",
     name: "أرماف أوديسي أكوا 200 مل",
     brand: "Armaf",
@@ -2038,7 +2038,7 @@ const PRODUCTS = [
     desc: "نسيم بحري نقي ومجدد للنشاط بعد التمارين الرياضية."
   },
   {
-    image: "images/img_158.jpg",
+    image: "batch3_images/img_158.jpg",
     id: "RH-0010",
     name: "أرماف أوديسي مارشميلو 200 مل",
     brand: "Armaf",
@@ -2051,7 +2051,7 @@ const PRODUCTS = [
     desc: "حلاوة المارشميلو الناعمة في سبراي يومي خفيف ومحبوب."
   },
   {
-    image: "images/img_159.jpg",
+    image: "batch3_images/img_159.jpg",
     id: "RH-0011",
     name: "أرماف أوديسي دبي شوكولات 200 مل",
     brand: "Armaf",
@@ -2064,7 +2064,7 @@ const PRODUCTS = [
     desc: "رائحة شوكولاتة دبي الشهيرة مع الفانيلا الغنية."
   },
   {
-    image: "images/img_160.jpg",
+    image: "batch3_images/img_160.jpg",
     id: "RH-0042",
     name: "لطافة ماهر بلاك سبراي 200 مل",
     brand: "Lattafa",
@@ -2077,7 +2077,7 @@ const PRODUCTS = [
     desc: "حصان ماهر الأسود برائحة الباتشولي والجلود في سبراي يدوم طويلاً."
   },
   {
-    image: "images/img_161.jpg",
+    image: "batch3_images/img_161.jpg",
     id: "RH-0043",
     name: "لطافة فخر سيلفر سبراي 200 مل",
     brand: "Lattafa",
@@ -2090,7 +2090,7 @@ const PRODUCTS = [
     desc: "معطر رجالي منعش يجمع التفاح والأخشاب العطرية."
   },
   {
-    image: "images/img_162.jpg",
+    image: "batch3_images/img_162.jpg",
     id: "RH-0044",
     name: "لطافة قائد الفرسان وايت سبراي 200 مل",
     brand: "Lattafa",
@@ -2103,7 +2103,7 @@ const PRODUCTS = [
     desc: "نقاء جوز الهند والزهور البيضاء في رذاذ معطر لطيف."
   },
   {
-    image: "images/img_163.jpg",
+    image: "batch3_images/img_163.jpg",
     id: "RH-0045",
     name: "لطافة بديع العود وايت سبراي 200 مل",
     brand: "Lattafa",
@@ -2116,7 +2116,7 @@ const PRODUCTS = [
     desc: "شرفات بديع العود الأبيض برائحة الفانيلا والأخشاب اللطيفة."
   },
   {
-    image: "images/img_164.jpg",
+    image: "batch3_images/img_164.jpg",
     id: "RH-0046",
     name: "لطافة حياتي سبراي 200 مل",
     brand: "Lattafa",
@@ -2129,7 +2129,7 @@ const PRODUCTS = [
     desc: "سبراي شبابي منعش ومناسب جداً للجامعة والنادي."
   },
   {
-    image: "images/img_165.jpg",
+    image: "batch3_images/img_165.jpg",
     id: "RH-0047",
     name: "لطافة ماهر جولد سبراي 200 مل",
     brand: "Lattafa",
@@ -2142,7 +2142,7 @@ const PRODUCTS = [
     desc: "بريق الذهب الشرقي برائحة التوت والعنبر والورد."
   },
   {
-    image: "images/img_166.jpg",
+    image: "batch3_images/img_166.jpg",
     id: "RH-0048",
     name: "لطافة أسد بدي سبراي 200 مل",
     brand: "Lattafa",
@@ -2155,7 +2155,7 @@ const PRODUCTS = [
     desc: "رائحة عطر أسد القوية في سبراي جسم لحماية وانتعاش طوال اليوم."
   },
   {
-    image: "images/img_167.jpg",
+    image: "batch3_images/img_167.jpg",
     id: "RH-0504",
     name: "لطافة حياتي إنتا سبراي معطر 200 مل",
     brand: "Lattafa",
@@ -2170,7 +2170,7 @@ const PRODUCTS = [
 
   // --- 6. بدي سبلاش منعش ---
   {
-    image: "images/img_168.jpg",
+    image: "batch3_images/img_168.jpg",
     id: "RH-0058",
     name: "سول دو جانييرو 62 بدي سبلاش",
     brand: "Luxury Splash",
@@ -2183,7 +2183,7 @@ const PRODUCTS = [
     desc: "شواطئ البرازيل الشهيرة بالفستق والكراميل المملح والفانيلا الدافئة."
   },
   {
-    image: "images/img_169.jpg",
+    image: "batch3_images/img_169.jpg",
     id: "RH-0059",
     name: "كريد أفينتوس ميست",
     brand: "Luxury Body Mist",
@@ -2196,7 +2196,7 @@ const PRODUCTS = [
     desc: "رذاذ عطري خفيف وأنيق بنفحات الأناناس المدخن الكلاسيكية."
   },
   {
-    image: "images/img_170.jpg",
+    image: "batch3_images/img_170.jpg",
     id: "RH-0060",
     name: "سيلفر سينت بدي سبلاش",
     brand: "Luxury Splash",
@@ -2209,7 +2209,7 @@ const PRODUCTS = [
     desc: "انتعاش قوي وفواح لليوم الكامل بنوتات زهر البرتقال والتفاح."
   },
   {
-    image: "images/img_171.jpg",
+    image: "batch3_images/img_171.jpg",
     id: "RH-0061",
     name: "أرابيان توباكو ميست",
     brand: "Luxury Splash",
@@ -2222,7 +2222,7 @@ const PRODUCTS = [
     desc: "رذاذ توباكو ناعم وخفيف ملائم بعد الاستحمام."
   },
   {
-    image: "images/img_172.jpg",
+    image: "batch3_images/img_172.jpg",
     id: "RH-0062",
     name: "كوكو بانانا بدي ميست",
     brand: "Luxury Body Mist",
@@ -2235,7 +2235,7 @@ const PRODUCTS = [
     desc: "حلاوة الموز وجوز الهند في مزيج استوائي يمنحك بهجة صيفية."
   },
   {
-    image: "images/img_173.jpg",
+    image: "batch3_images/img_173.jpg",
     id: "RH-0063",
     name: "بيلي آيليش ميست",
     brand: "Luxury Body Mist",
@@ -2248,7 +2248,7 @@ const PRODUCTS = [
     desc: "رائحة الفانيلا والكاكاو اللذيذة برذاذ منعش وناعم للبشرة."
   },
   {
-    image: "images/img_174.jpg",
+    image: "batch3_images/img_174.jpg",
     id: "RH-0064",
     name: "ألثاير بدي سبلاش",
     brand: "Luxury Splash",
@@ -2261,7 +2261,7 @@ const PRODUCTS = [
     desc: "إلهام دي مارلي ألثاير بنوتات فانيلا بوربون والقرفة والبرتقال."
   },
   {
-    image: "images/img_175.jpg",
+    image: "batch3_images/img_175.jpg",
     id: "RH-0065",
     name: "سبايس بومب ميست",
     brand: "Luxury Body Mist",
@@ -2274,7 +2274,7 @@ const PRODUCTS = [
     desc: "قنبلة التوابل الحارة والقرفة والجلود لانتعاش رجالي دافئ."
   },
   {
-    image: "images/img_176.jpg",
+    image: "batch3_images/img_176.jpg",
     id: "RH-0066",
     name: "ألترا ميل بدي ميست",
     brand: "Luxury Body Mist",
@@ -2287,7 +2287,7 @@ const PRODUCTS = [
     desc: "الكمثرى والفانيلا والقرفة برذاذ يومي خفيف وفواح."
   },
   {
-    image: "images/img_177.jpg",
+    image: "batch3_images/img_177.jpg",
     id: "RH-0067",
     name: "بلوبيري باندت كيك ميست",
     brand: "Luxury Body Mist",
@@ -2300,7 +2300,7 @@ const PRODUCTS = [
     desc: "رائحة كيكة التوت الأزرق الطازجة المخبوزة مع الفانيلا."
   },
   {
-    image: "images/img_178.jpg",
+    image: "batch3_images/img_178.jpg",
     id: "RH-0068",
     name: "عود ماراكوجا بدي ميست",
     brand: "Luxury Body Mist",
@@ -2313,7 +2313,7 @@ const PRODUCTS = [
     desc: "بديل مايسون كريفيللي عود ماراكوجا بالباشن فروت والعود المدخن."
   },
   {
-    image: "images/img_179.jpg",
+    image: "batch3_images/img_179.jpg",
     id: "RH-0069",
     name: "بلاك لكزس بدي سبلاش",
     brand: "Luxury Splash",
@@ -2326,7 +2326,7 @@ const PRODUCTS = [
     desc: "غموض الخشب والمسك الأسود برائحة تفيض بالفخامة."
   },
   {
-    image: "images/img_180.jpg",
+    image: "batch3_images/img_180.jpg",
     id: "RH-0070",
     name: "سمر فايب إيماجينيشن سبلاش",
     brand: "Luxury Splash",
@@ -2339,7 +2339,7 @@ const PRODUCTS = [
     desc: "أجواء صيفية متألقة مستوحاة من لويس فويتون إيماجينيشن."
   },
   {
-    image: "images/img_181.jpg",
+    image: "batch3_images/img_181.jpg",
     id: "RH-0071",
     name: "مارشميلو ميست",
     brand: "Luxury Body Mist",
@@ -2352,7 +2352,7 @@ const PRODUCTS = [
     desc: "رذاذ حلو وخفيف يشبه السحاب السكري اللطيف على البشرة."
   },
   {
-    image: "images/img_182.jpg",
+    image: "batch3_images/img_182.jpg",
     id: "RH-0072",
     name: "قصة إمبريال فالي بدي ميست",
     brand: "Luxury Body Mist",
@@ -2365,7 +2365,7 @@ const PRODUCTS = [
     desc: "رذاذ يومي معطر برائحة إمبريال فالي المحبوبة."
   },
   {
-    image: "images/img_183.jpg",
+    image: "batch3_images/img_183.jpg",
     id: "RH-0073",
     name: "باكارات روج بدي سبلاش",
     brand: "Luxury Splash",
@@ -2378,7 +2378,7 @@ const PRODUCTS = [
     desc: "سحر الباكارات في رذاذ يومي منعش وفاخر للجسم والملابس."
   },
   {
-    image: "images/img_184.jpg",
+    image: "batch3_images/img_184.jpg",
     id: "RH-0074",
     name: "إنفيكتوس إليكسير ميست",
     brand: "Luxury Splash",
@@ -2391,7 +2391,7 @@ const PRODUCTS = [
     desc: "انتعاش البطولة وقوة الفانيلا والأخشاب الرياضية."
   },
   {
-    image: "images/img_185.jpg",
+    image: "batch3_images/img_185.jpg",
     id: "RH-0075",
     name: "لويس فويتون أفترنون سويم سبلاش",
     brand: "Luxury Splash",
@@ -2404,7 +2404,7 @@ const PRODUCTS = [
     desc: "سباحة في بعد الظهيرة.. برتقال وماندرين وبرغموت ساحلي منعش."
   },
   {
-    image: "images/img_186.jpg",
+    image: "batch3_images/img_186.jpg",
     id: "RH-0076",
     name: "بون بون سبلاش",
     brand: "Luxury Splash",
@@ -2417,7 +2417,7 @@ const PRODUCTS = [
     desc: "سكاكر البون بون اللذيذة والكراميل الذائب مع زهر البرتقال."
   },
   {
-    image: "images/img_187.jpg",
+    image: "batch3_images/img_187.jpg",
     id: "RH-0077",
     name: "ستروبيري كريم كيك ميست",
     brand: "Luxury Splash",
@@ -2430,7 +2430,7 @@ const PRODUCTS = [
     desc: "كيك الفراولة والكريمة اللذيذة لإحساس سويت يدوم طويلاً."
   },
   {
-    image: "images/img_188.jpg",
+    image: "batch3_images/img_188.jpg",
     id: "RH-0078",
     name: "أرماني يو سبلاش",
     brand: "Luxury Splash",
@@ -2443,7 +2443,7 @@ const PRODUCTS = [
     desc: "معطر جسم يومي برائحة الكستناء والفانيلا الجذابة."
   },
   {
-    image: "images/img_189.jpg",
+    image: "batch3_images/img_189.jpg",
     id: "RH-0079",
     name: "سوفاج بدي سبلاش",
     brand: "Luxury Splash",
@@ -2456,7 +2456,7 @@ const PRODUCTS = [
     desc: "رذاذ منعش برائحة البرغموت والفلفل الأسود والأمبروكسان."
   },
   {
-    image: "images/img_190.jpg",
+    image: "batch3_images/img_190.jpg",
     id: "RH-0080",
     name: "شاليمار بدي سبلاش",
     brand: "Luxury Splash",
@@ -2469,7 +2469,7 @@ const PRODUCTS = [
     desc: "كلاسيكية الفانيلا الشرقية والزهور بلمسة خفيفة وعصرية."
   },
   {
-    image: "images/img_191.jpg",
+    image: "batch3_images/img_191.jpg",
     id: "RH-0081",
     name: "بيانكو لاتيه سبلاش",
     brand: "Luxury Splash",
@@ -2482,7 +2482,7 @@ const PRODUCTS = [
     desc: "الحليب الدافئ والفانيلا والكراميل برذاذ ناعم مثل الحلوى."
   },
   {
-    image: "images/img_192.jpg",
+    image: "batch3_images/img_192.jpg",
     id: "RH-0082",
     name: "يارا كاندي بدي سبلاش",
     brand: "Luxury Splash",
@@ -2497,7 +2497,7 @@ const PRODUCTS = [
 
   // --- 7. المسك الأبيض والفاخر ---
   {
-    image: "images/img_193.jpg",
+    image: "batch3_images/img_193.jpg",
     id: "RH-0035",
     name: "كاندي مسك 100 مل",
     brand: "Vitality Musk Collection",
@@ -2510,7 +2510,7 @@ const PRODUCTS = [
     desc: "مسك النظافة الفاخر ممزوج بحلاوة السكر اللطيفة ولمسة مخملية ناعمة."
   },
   {
-    image: "images/img_194.jpg",
+    image: "batch3_images/img_194.jpg",
     id: "RH-0036",
     name: "فانيلا مسك 100 مل",
     brand: "Vitality Musk Collection",
@@ -2523,7 +2523,7 @@ const PRODUCTS = [
     desc: "مزيج متناغم فائق الرقة من الفانيلا النقية والمسك الأبيض."
   },
   {
-    image: "images/img_195.jpg",
+    image: "batch3_images/img_195.jpg",
     id: "RH-0037",
     name: "تشيري مسك 100 مل",
     brand: "Vitality Musk Collection",
@@ -2536,7 +2536,7 @@ const PRODUCTS = [
     desc: "مسك فاخر غني بنفحات الكرز الأحمر الحلو لانتعاش يدوم ساعات."
   },
   {
-    image: "images/img_196.jpg",
+    image: "batch3_images/img_196.jpg",
     id: "RH-0038",
     name: "روز مسك 100 مل",
     brand: "Vitality Musk Collection",
@@ -2549,7 +2549,7 @@ const PRODUCTS = [
     desc: "عبير الورد الطبيعي النقي مع قاعدة المسك الصافية."
   },
   {
-    image: "images/img_197.jpg",
+    image: "batch3_images/img_197.jpg",
     id: "RH-0039",
     name: "بيتش مسك 100 مل",
     brand: "Vitality Musk Collection",
@@ -2562,7 +2562,7 @@ const PRODUCTS = [
     desc: "مسك الخوخ النضر.. رائحة منعشة تجمع النظافة والفاكهة الصيفية."
   },
   {
-    image: "images/img_198.jpg",
+    image: "batch3_images/img_198.jpg",
     id: "RH-0040",
     name: "بلوبيري مسك 100 مل",
     brand: "Vitality Musk Collection",
@@ -2575,7 +2575,7 @@ const PRODUCTS = [
     desc: "انتعاش التوت الأزرق الفاكهي في حضن المسك الأبيض الدافئ."
   },
   {
-    image: "images/img_199.jpg",
+    image: "batch3_images/img_199.jpg",
     id: "RH-0041",
     name: "وايت مسك 100 مل",
     brand: "Vitality Musk Collection",
