@@ -82,7 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
         <div class="card-image-box">
-          <svg class="bottle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
+          <img src="${p.image || 'images/logo.jpg'}" alt="${escapeHtml(p.name)}" class="card-product-img" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <svg class="bottle-icon" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
             <path d="M10 2h4"></path>
             <path d="M12 2v3"></path>
             <path d="M8 5h8v2a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V5z"></path>
@@ -177,7 +178,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Copy to clipboard
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(message).then(() => {
-        showToast(`تم نسخ تفاصيل العطر (${product.name})! جاري فتح الماسنجر...`);
+        showToast(`تم نسخ تفاصيل (${product.name})! جاري فتح الماسنجر...`);
       }).catch(() => {
         showToast(`جاري فتح شات الماسنجر لطلب (${product.name})...`);
       });
