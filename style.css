@@ -112,9 +112,17 @@ body {
 }
 
 .brand-logo-img {
-  height: 52px;
+  height: 58px;
+  max-height: 62px;
   width: auto;
+  max-width: 220px;
   object-fit: contain;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.brand-logo-img:hover {
+  transform: scale(1.02);
 }
 
 .brand-text h1 {
