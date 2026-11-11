@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رُوح للعطور | ROUH & CO. — SCENTS FOR YOUR STORY</title>
+  <meta name="description" content="متجر رُوح للعطور — الكتالوج الرسمي لأفخم العطور الأوريجنال وبدائل الميرور العالمية، معطرات الجسم، والمسك الفاخر مع الشحن لجميع محافظات مصر.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="#" class="brand-wrapper">
+        <div class="brand-logo-icon">ر</div>
+        <div class="brand-text">
+          <h1>رُوح | ROUH & CO.</h1>
+          <span>SCENTS FOR YOUR STORY</span>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <a href="https://m.me/rouh.perfumes.eg" target="_blank" rel="noopener" class="btn-header-messenger">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.908 1.455 5.516 3.737 7.199V22l3.413-1.874c.905.251 1.865.388 2.85.388 5.523 0 10-4.145 10-9.256C22 6.145 17.523 2 12 2zm1.002 12.443l-2.55-2.72-4.978 2.72 5.474-5.815 2.614 2.72 4.914-2.72-5.474 5.815z"/>
+          </svg>
+          <span>تواصل عبر ماسنجر</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-badge">
+        ✨ الكتالوج الرسمي 2026 • متجر رُوح
+      </div>
+      <h2 class="hero-title">عالم العطور الفاخرة بين <span class="highlight">يديك</span></h2>
+      <p class="hero-subtitle">
+        تصفح أرقى تشكيلات العطور الأوريجنال والبدائل العالمية بأعلى ثبات وجودة ميرور. اختر عطرك المفضل واطلبه مباشرة بضغطة زر عبر ماسنجر.
+      </p>
+
+      <div class="features-bar">
+        <div class="feature-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>جودة مضمونة 100%</span>
+        </div>
+        <div class="feature-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="1" y="3" width="15" height="13"></rect>
+            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+          </svg>
+          <span>شحن لجميع محافظات مصر</span>
+        </div>
+        <div class="feature-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          <span>أعلى ثبات وفوحان</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Catalog Content -->
+  <main class="container">
+    <!-- Controls (Search + Filter + Sort) -->
+    <div class="controls-bar">
+      <div class="search-and-sort">
+        <div class="search-input-wrapper">
+          <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="search-input" class="search-input" placeholder="ابحث باسم العطر، الكود (مثل RH-0110)، الماركة، أو النوتات (فانيلا، عنبر)...">
+          <button id="clear-search-btn" class="clear-search-btn" title="مسح البحث">✕</button>
+        </div>
+
+        <select id="sort-select" class="sort-select">
+          <option value="default">الترتيب: الافتراضي</option>
+          <option value="price-asc">السعر: من الأقل للأعلى</option>
+          <option value="price-desc">السعر: من الأعلى للأقل</option>
+          <option value="name-asc">الاسم: أبجدياً</option>
+        </select>
+      </div>
+
+      <!-- Categories Filter Tabs -->
+      <div class="category-filter-list">
+        <button class="filter-btn active" data-category="all">
+          <span>الكل</span>
+          <span class="filter-count">0</span>
+        </button>
+        <button class="filter-btn" data-category="original-men">
+          <span>عطور أوريجنال - رجالي</span>
+          <span class="filter-count">0</span>
+        </button>
+        <button class="filter-btn" data-category="original-women-unisex">
+          <span>عطور أوريجنال - نسائي وللجنسين</span>
+          <span class="filter-count">0</span>
+        </button>
+        <button class="filter-btn" data-category="mirror-men">
+          <span>عطور ميرور - رجالي</span>
+          <span class="filter-count">0</span>
+        </button>
+        <button class="filter-btn" data-category="mirror-women-unisex">
+          <span>عطور ميرور - نسائي وللجنسين</span>
+          <span class="filter-count">0</span>
+        </button>
+        <button class="filter-btn" data-category="body-spray">
+          <span>بدي سبراي ومعطرات الجسم</span>
+          <span class="filter-count">0</span>
+        </button>
+        <button class="filter-btn" data-category="body-splash">
+          <span>بدي سبلاش منعش</span>
+          <span class="filter-count">0</span>
+        </button>
+        <button class="filter-btn" data-category="white-musk">
+          <span>المسك الأبيض والفاخر</span>
+          <span class="filter-count">0</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Results Status -->
+    <div class="results-info">
+      <div>يتم عرض: <strong id="results-count">0</strong> عطر</div>
+      <div style="font-size: 0.8rem; color: var(--gold-light);">💡 اضغط على "شراء الآن" لطلب أي عطر عبر شات ماسنجر فوراً</div>
+    </div>
+
+    <!-- Products Grid -->
+    <div id="products-grid" class="products-grid">
+      <!-- Generated dynamically by app.js -->
+    </div>
+  </main>
+
+  <!-- Floating Messenger & Facebook Button -->
+  <div class="floating-actions">
+    <a href="https://m.me/rouh.perfumes.eg" target="_blank" rel="noopener" class="fab-btn fab-messenger" title="تواصل معنا عبر ماسنجر">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.908 1.455 5.516 3.737 7.199V22l3.413-1.874c.905.251 1.865.388 2.85.388 5.523 0 10-4.145 10-9.256C22 6.145 17.523 2 12 2zm1.002 12.443l-2.55-2.72-4.978 2.72 5.474-5.815 2.614 2.72 4.914-2.72-5.474 5.815z"/>
+      </svg>
+    </a>
+    <a href="https://www.facebook.com/rouh.perfumes.eg/" target="_blank" rel="noopener" class="fab-btn fab-facebook" title="صفحتنا على فيسبوك">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast-notice" class="toast-notice">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toast-message">تم نسخ تفاصيل العطر! جاري فتح ماسنجر...</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2>رُوح | ROUH & CO.</h2>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.25rem;">SCENTS FOR YOUR STORY — عطور تحكي قصتك</p>
+        </div>
+        <div class="footer-social-links">
+          <a href="https://www.facebook.com/rouh.perfumes.eg/" target="_blank" rel="noopener" class="social-link">
+            <span>صفحتنا على فيسبوك</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+          <a href="https://m.me/rouh.perfumes.eg" target="_blank" rel="noopener" class="social-link">
+            <span>رسائل ماسنجر</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>جميع الحقوق محفوظة &copy; 2026 متجر رُوح للعطور | ROUH & CO. • شحن لجميع محافظات مصر</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
