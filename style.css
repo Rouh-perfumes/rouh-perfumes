@@ -2091,6 +2091,25 @@ body.light-theme .price-currency-lbl {
     gap: 0.4rem !important;
   }
 
+  .btn-header-facebook {
+    width: 34px !important;
+    height: 34px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    background: #1877f2 !important;
+    color: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(24, 119, 242, 0.4) !important;
+  }
+  
+  .btn-header-facebook svg {
+    width: 17px !important;
+    height: 17px !important;
+  }
+
   .btn-theme-toggle {
     width: 34px !important;
     height: 34px !important;
@@ -2467,7 +2486,7 @@ body.light-theme .price-currency-lbl {
     padding: 1rem 1.15rem !important;
   }
 
-  /* Mobile Bottom Nav: Fixed 4 Equal Columns (25% each) */
+  /* Mobile Bottom Nav: Fixed 5 Equal Columns (20% each) */
   .mobile-bottom-nav {
     display: flex !important;
     position: fixed !important;
@@ -2489,7 +2508,7 @@ body.light-theme .price-currency-lbl {
 
   .bottom-nav-item {
     flex: 1 1 0 !important;
-    width: 25% !important;
+    width: 20% !important;
     min-width: 0 !important;
     display: flex !important;
     flex-direction: column !important;
