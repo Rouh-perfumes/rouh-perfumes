@@ -251,13 +251,76 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- 6. Render Products Grid ---
-  function renderProducts() {
-    const list = getFilteredProducts();
-    resultsCount.textContent = list.length;
+  // --- 6. High-Performance Progressive Render (Batch Loading) ---
+  const BATCH_SIZE = 24;
+  let currentRenderLimit = BATCH_SIZE;
+  let activeFilteredList = [];
+
+  function generateProductCardHtml(p) {
+    const isWishlisted = wishlist.includes(p.id);
+    const genderBadge = p.gender === 'unisex' ? '🚻 للجنسين' : (p.gender === 'women' ? '👗 حريمي' : '👔 رجالي');
+
+    return `
+      <div class="product-card" data-id="${p.id}">
+        <div class="card-header-bar">
+          <span class="card-badge" title="${escapeHtml(p.categoryName || '')}">${genderBadge} • ${escapeHtml(p.categoryName || 'عطر فاخر')}</span>
+          <button class="card-wishlist-btn ${isWishlisted ? 'active' : ''}" 
+                  onclick="toggleWishlist('${p.id}', event)" 
+                  title="${isWishlisted ? 'إزالة من المفضلة' : 'إضافة للمفضلة'}">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="${isWishlisted ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2.2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="card-image-wrapper" onclick="openQuickView('${p.id}')">
+          <img src="${p.image || 'images/logo.jpg'}" alt="${escapeHtml(p.name)}" class="card-product-img" loading="lazy" decoding="async" onerror="this.src='batch1_images/img_001.jpg';">
+          <span class="card-size-tag">${escapeHtml(p.size || '100 ml')}</span>
+          <div class="card-quickview-overlay">
+            <span class="btn-quickview-hover">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              عرض سريع
+            </span>
+          </div>
+        </div>
+
+        <div class="card-details">
+          <span class="card-brand-label">${escapeHtml(p.brand || 'ROUH & CO.')}</span>
+          <h3 class="card-product-title" onclick="openQuickView('${p.id}')" style="cursor:pointer;" title="${escapeHtml(p.name)}">
+            ${escapeHtml(p.name)}
+          </h3>
+
+          <div class="card-notes-list">
+            ${(p.notes || []).slice(0, 3).map(n => `<span class="note-chip" onclick="searchByNote('${escapeHtml(n)}', event)">${escapeHtml(n)}</span>`).join('')}
+          </div>
+        </div>
+
+        <div class="card-footer-box">
+          <div class="card-price-container">
+            <span class="price-val">${Number(p.price).toLocaleString('en-US')}</span>
+            <span class="price-currency-lbl">${STORE_CONFIG.currency || 'ج.م'}</span>
+          </div>
+
+          <button class="btn-card-order-messenger" onclick="orderViaMessenger('${p.id}')" title="طلب مباشر عبر ماسنجر">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.908 1.455 5.516 3.737 7.199V22l3.413-1.874c.905.251 1.865.388 2.85.388 5.523 0 10-4.145 10-9.256C22 6.145 17.523 2 12 2zm1.002 12.443l-2.55-2.72-4.978 2.72 5.474-5.815 2.614 2.72 4.914-2.72-5.474 5.815z"/>
+            </svg>
+            <span>طلب العطر</span>
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderProducts(resetLimit = true) {
+    if (resetLimit) {
+      currentRenderLimit = BATCH_SIZE;
+    }
+    activeFilteredList = getFilteredProducts();
+    resultsCount.textContent = activeFilteredList.length;
     renderActiveTags();
 
-    if (list.length === 0) {
+    if (activeFilteredList.length === 0) {
       productsGrid.innerHTML = `
         <div class="empty-catalog-state">
           <div class="empty-state-icon">
@@ -272,64 +335,70 @@ document.addEventListener("DOMContentLoaded", () => {
           <button class="btn-primary-gold" onclick="resetAllFilters()">عرض كل العطور (198)</button>
         </div>
       `;
+      removeLoadMoreSentinel();
       return;
     }
 
-    productsGrid.innerHTML = list.map(p => {
-      const isWishlisted = wishlist.includes(p.id);
-      const genderBadge = p.gender === 'unisex' ? '🚻 للجنسين' : (p.gender === 'women' ? '👗 حريمي' : '👔 رجالي');
+    const visibleItems = activeFilteredList.slice(0, currentRenderLimit);
+    productsGrid.innerHTML = visibleItems.map(p => generateProductCardHtml(p)).join("");
 
-      return `
-        <div class="product-card" data-id="${p.id}">
-          <div class="card-header-bar">
-            <span class="card-badge" title="${escapeHtml(p.categoryName || '')}">${genderBadge} • ${escapeHtml(p.categoryName || 'عطر فاخر')}</span>
-            <button class="card-wishlist-btn ${isWishlisted ? 'active' : ''}" 
-                    onclick="toggleWishlist('${p.id}', event)" 
-                    title="${isWishlisted ? 'إزالة من المفضلة' : 'إضافة للمفضلة'}">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="${isWishlisted ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2.2">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-              </svg>
-            </button>
-          </div>
+    updateLoadMoreSentinel();
+  }
 
-          <div class="card-image-wrapper" onclick="openQuickView('${p.id}')">
-            <img src="${p.image || 'images/logo.jpg'}" alt="${escapeHtml(p.name)}" class="card-product-img" loading="lazy" onerror="this.src='batch1_images/img_001.jpg';">
-            <span class="card-size-tag">${escapeHtml(p.size || '100 ml')}</span>
-            <div class="card-quickview-overlay">
-              <span class="btn-quickview-hover">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                عرض سريع
-              </span>
-            </div>
-          </div>
+  function loadMoreProducts() {
+    if (currentRenderLimit >= activeFilteredList.length) return;
+    const prevLimit = currentRenderLimit;
+    currentRenderLimit = Math.min(currentRenderLimit + BATCH_SIZE, activeFilteredList.length);
+    const nextItems = activeFilteredList.slice(prevLimit, currentRenderLimit);
+    
+    const fragment = document.createElement("div");
+    fragment.innerHTML = nextItems.map(p => generateProductCardHtml(p)).join("");
+    while (fragment.firstChild) {
+      productsGrid.appendChild(fragment.firstChild);
+    }
+    updateLoadMoreSentinel();
+  }
 
-          <div class="card-details">
-            <span class="card-brand-label">${escapeHtml(p.brand || 'ROUH & CO.')}</span>
-            <h3 class="card-product-title" onclick="openQuickView('${p.id}')" style="cursor:pointer;" title="${escapeHtml(p.name)}">
-              ${escapeHtml(p.name)}
-            </h3>
+  let loadMoreSentinel = null;
+  let infiniteObserver = null;
 
-            <div class="card-notes-list">
-              ${(p.notes || []).slice(0, 3).map(n => `<span class="note-chip" onclick="searchByNote('${escapeHtml(n)}', event)">${escapeHtml(n)}</span>`).join('')}
-            </div>
-          </div>
-
-          <div class="card-footer-box">
-            <div class="card-price-container">
-              <span class="price-val">${Number(p.price).toLocaleString('en-US')}</span>
-              <span class="price-currency-lbl">${STORE_CONFIG.currency || 'ج.م'}</span>
-            </div>
-
-            <button class="btn-card-order-messenger" onclick="orderViaMessenger('${p.id}')" title="طلب مباشر عبر ماسنجر">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.908 1.455 5.516 3.737 7.199V22l3.413-1.874c.905.251 1.865.388 2.85.388 5.523 0 10-4.145 10-9.256C22 6.145 17.523 2 12 2zm1.002 12.443l-2.55-2.72-4.978 2.72 5.474-5.815 2.614 2.72 4.914-2.72-5.474 5.815z"/>
-              </svg>
-              <span>طلب العطر</span>
-            </button>
-          </div>
-        </div>
+  function updateLoadMoreSentinel() {
+    removeLoadMoreSentinel();
+    if (currentRenderLimit < activeFilteredList.length) {
+      loadMoreSentinel = document.createElement("div");
+      loadMoreSentinel.id = "catalog-load-more-box";
+      loadMoreSentinel.className = "load-more-container";
+      loadMoreSentinel.innerHTML = `
+        <div class="load-more-status">عرض ${currentRenderLimit} من إجمالي ${activeFilteredList.length} عطراً</div>
+        <button class="btn-load-more" id="btn-load-more-trigger">
+          <span>تحميل المزيد من العطور ✨</span>
+        </button>
       `;
-    }).join("");
+      productsGrid.parentNode.insertBefore(loadMoreSentinel, productsGrid.nextSibling);
+
+      const triggerBtn = document.getElementById("btn-load-more-trigger");
+      if (triggerBtn) {
+        triggerBtn.addEventListener("click", loadMoreProducts);
+      }
+
+      // Smooth Auto-Load as User Approaches Bottom
+      if ("IntersectionObserver" in window) {
+        infiniteObserver = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            loadMoreProducts();
+          }
+        }, { rootMargin: "400px" });
+        infiniteObserver.observe(loadMoreSentinel);
+      }
+    }
+  }
+
+  function removeLoadMoreSentinel() {
+    if (infiniteObserver && loadMoreSentinel) {
+      infiniteObserver.unobserve(loadMoreSentinel);
+    }
+    const existing = document.getElementById("catalog-load-more-box");
+    if (existing) existing.remove();
   }
 
   // --- 7. Active Filter Tags Indicator ---
@@ -389,9 +458,17 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProducts();
   }
 
-  desktopSearchInput.addEventListener("input", (e) => handleSearchInput(e.target.value));
+  let searchDebounceTimer = null;
+  function onSearchType(val) {
+    clearTimeout(searchDebounceTimer);
+    searchDebounceTimer = setTimeout(() => {
+      handleSearchInput(val);
+    }, 120);
+  }
+
+  desktopSearchInput.addEventListener("input", (e) => onSearchType(e.target.value));
   if (mobileSearchInput) {
-    mobileSearchInput.addEventListener("input", (e) => handleSearchInput(e.target.value));
+    mobileSearchInput.addEventListener("input", (e) => onSearchType(e.target.value));
   }
 
   desktopSearchClear.addEventListener("click", () => {

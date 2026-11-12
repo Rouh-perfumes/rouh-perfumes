@@ -1170,8 +1170,8 @@ img {
   flex-direction: column;
   position: relative;
   transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  content-visibility: auto;
+  contain-intrinsic-size: 0 320px;
 }
 
 .product-card:hover {
@@ -1452,6 +1452,46 @@ body.light-theme .price-currency-lbl {
   background: var(--bg-surface);
   border: 1px dashed var(--border-subtle);
   border-radius: var(--radius-lg);
+}
+
+/* Progressive Load More / Infinite Scroll Container */
+.load-more-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.5rem 0 3.5rem;
+  width: 100%;
+}
+
+.load-more-status {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.btn-load-more {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-active);
+  color: var(--gold-light);
+  padding: 0.65rem 1.8rem;
+  border-radius: var(--radius-full);
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: var(--transition-smooth);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-load-more:hover {
+  background: var(--gold-primary);
+  color: #070e17;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--gold-glow);
 }
 
 .empty-state-icon {
@@ -2301,6 +2341,10 @@ body.light-theme .price-currency-lbl {
     padding: 0.45rem !important;
     margin-bottom: 0.45rem !important;
     box-sizing: border-box !important;
+  }
+
+  .card-product-img {
+    filter: none !important; /* Huge GPU performance speedup on mobile */
   }
 
   .card-size-tag {
