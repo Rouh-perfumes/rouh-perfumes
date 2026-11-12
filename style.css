@@ -128,6 +128,9 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 body {
@@ -138,6 +141,9 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
   transition: background-color var(--transition-smooth), color var(--transition-smooth);
 }
 
@@ -1913,6 +1919,26 @@ body.light-theme .price-currency-lbl {
   color: var(--text-muted);
 }
 
+.btn-device-toggle {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-active);
+  color: var(--gold-light);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: var(--transition-smooth);
+}
+
+.btn-device-toggle:hover {
+  background: var(--gold-primary);
+  color: #070e17;
+}
+
 /* --- 14. Keyframe Animations --- */
 @keyframes fadeInDown {
   from {
@@ -1952,16 +1978,34 @@ body.light-theme .price-currency-lbl {
 }
 
 /* ==========================================================================
-   15. PIXEL-PERFECT MOBILE BREAKPOINTS (Max-Width: 768px)
+   15. DEDICATED MOBILE THEME & ENGINE (Auto-Detected & Screen <= 768px)
    ========================================================================== */
-@media (max-width: 768px) {
+@media (max-width: 768px), (max-device-width: 768px) {
   :root {
-    --header-height: 56px;
-    --mobile-bottom-nav-height: 56px;
+    --header-height: 54px;
+    --mobile-bottom-nav-height: 60px;
   }
   
+  html, body {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
   body {
-    padding-bottom: calc(var(--mobile-bottom-nav-height) + 1.25rem);
+    padding-bottom: calc(var(--mobile-bottom-nav-height) + 1.5rem) !important;
+  }
+
+  /* Strict Zero Horizontal Overflow Container */
+  .container {
+    width: 100% !important;
+    max-width: 100vw !important;
+    padding: 0 0.65rem !important;
+    box-sizing: border-box !important;
   }
 
   /* Utility Hide */
@@ -1973,139 +2017,196 @@ body.light-theme .price-currency-lbl {
   .announcement-bar {
     padding: 0.35rem 0.5rem;
     font-size: 0.75rem;
+    overflow: hidden;
   }
-  .announcement-bar .ticker-controls {
-    display: none;
-  }
+  .announcement-bar .ticker-controls,
   .announcement-bar .top-bar-links {
-    display: none;
+    display: none !important;
   }
 
-  /* Header on Mobile: Super Clean & Elegant */
+  /* Header on Mobile: Super Clean & Compact 54px */
   .header-inner {
-    height: 56px;
-    gap: 0.5rem;
-    padding: 0 0.5rem;
+    height: 54px !important;
+    gap: 0.5rem !important;
+    padding: 0 0.5rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   }
   
   .brand-logo-img {
-    height: 36px;
+    height: 34px !important;
   }
   
   .brand-name {
-    font-size: 1.05rem;
+    font-size: 1.05rem !important;
   }
   
-  .brand-tagline {
-    display: none;
-  }
-
+  .brand-tagline,
   .header-search-container {
-    display: none;
+    display: none !important;
   }
 
   .header-actions {
-    gap: 0.4rem;
+    gap: 0.4rem !important;
   }
 
   .btn-theme-toggle {
-    width: 34px;
-    height: 34px;
+    width: 34px !important;
+    height: 34px !important;
   }
 
   .btn-wishlist {
-    padding: 0.4rem 0.65rem;
+    padding: 0.35rem 0.6rem !important;
   }
   
   .wishlist-count-badge {
-    margin-right: 0;
+    margin-right: 0 !important;
   }
 
-  /* Stories Carousel on Mobile: Touch-First & NO FLOATING ARROWS */
+  /* Stories Highlights on Mobile: Touch Momentum, Zero Arrows */
   .story-highlights-section {
-    padding: 0.65rem 0 0.4rem;
+    padding: 0.6rem 0 0.35rem !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+  }
+
+  .story-wrapper-rel {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    overflow: hidden !important;
   }
   
   .story-scroll-btn {
-    display: none !important; /* Hide clumsy arrows covering the stories */
+    display: none !important;
   }
 
   .story-highlights-track {
-    gap: 0.85rem;
-    padding: 0.2rem 0.5rem;
+    gap: 0.85rem !important;
+    padding: 0.25rem 0.65rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    scroll-snap-type: x proximity;
+  }
+
+  .story-circle-item {
+    scroll-snap-align: start;
+    flex-shrink: 0;
   }
 
   .story-ring {
-    width: 56px;
-    height: 56px;
-    padding: 2.5px;
+    width: 54px !important;
+    height: 54px !important;
+    padding: 2px !important;
   }
 
   .story-icon {
-    font-size: 1.35rem;
+    font-size: 1.3rem !important;
   }
 
   .story-title {
-    font-size: 0.72rem;
+    font-size: 0.72rem !important;
   }
 
   .story-count {
-    font-size: 0.65rem;
+    font-size: 0.65rem !important;
   }
 
-  /* Hero Section on Mobile: Compact Luxury Banner (~110px) */
+  /* Hero Section on Mobile: Compact Luxury Banner & No Giant Glow Bubble */
   .hero-section {
-    padding: 0.6rem 0;
+    padding: 0.5rem 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
+  }
+
+  .hero-ambient-glow {
+    display: none !important; /* Stop glow bubble from expanding viewport */
   }
 
   .hero-banner-card {
-    padding: 0.85rem 1rem;
-    border-radius: var(--radius-md);
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+    padding: 0.85rem 1rem !important;
+    border-radius: var(--radius-md) !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .hero-badge-pill {
-    margin-bottom: 0.35rem;
-    padding: 0.15rem 0.55rem;
-    font-size: 0.68rem;
+    margin-bottom: 0.35rem !important;
+    padding: 0.15rem 0.55rem !important;
+    font-size: 0.68rem !important;
   }
 
   .hero-heading {
-    font-size: 1.35rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.25;
+    font-size: 1.3rem !important;
+    margin-bottom: 0.45rem !important;
+    line-height: 1.25 !important;
   }
 
   .btn-primary-gold {
-    padding: 0.55rem 1.2rem;
-    font-size: 0.82rem;
+    padding: 0.5rem 1.15rem !important;
+    font-size: 0.82rem !important;
   }
 
   /* Catalog Controls on Mobile */
   .catalog-controls-section {
-    top: 56px;
-    padding: 0.6rem 0;
-    margin-bottom: 1rem;
+    top: 54px !important;
+    padding: 0.45rem 0 !important;
+    margin-bottom: 0.75rem !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow: hidden !important;
   }
 
   .mobile-search-row {
     display: block !important;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem !important;
+    width: 100% !important;
   }
 
   .mobile-search-row .search-input-box {
-    padding: 0.45rem 0.85rem;
+    padding: 0.45rem 0.85rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
+  /* Gender Quick Tabs: Exactly 4 Equal Balanced Columns */
   .gender-quick-strip {
-    margin-bottom: 0.5rem;
-    gap: 0.35rem;
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0.3rem !important;
+    width: 100% !important;
+    margin-bottom: 0.55rem !important;
+    box-sizing: border-box !important;
   }
 
   .gender-chip {
-    padding: 0.25rem 0.65rem;
-    font-size: 0.72rem;
+    padding: 0.35rem 0.15rem !important;
+    font-size: 0.72rem !important;
+    text-align: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    min-width: 0 !important;
+  }
+
+  /* Category Pills & Sort Row: Stacked & Full Width */
+  .controls-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+  }
+
+  .pills-scroll-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
   }
 
   .pills-nav-arrow {
@@ -2113,154 +2214,272 @@ body.light-theme .price-currency-lbl {
   }
 
   .category-pills-wrapper {
-    gap: 0.4rem;
+    gap: 0.4rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    padding: 0.2rem 0 !important;
+    -webkit-overflow-scrolling: touch !important;
   }
 
   .filter-pill {
-    padding: 0.4rem 0.75rem;
-    font-size: 0.78rem;
-    gap: 0.35rem;
+    padding: 0.38rem 0.7rem !important;
+    font-size: 0.76rem !important;
+    gap: 0.35rem !important;
+    flex-shrink: 0 !important;
   }
 
   .pill-count {
-    font-size: 0.68rem;
-    padding: 0.05rem 0.35rem;
+    font-size: 0.68rem !important;
+    padding: 0.05rem 0.35rem !important;
+  }
+
+  .secondary-controls {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: stretch !important;
+    margin-top: 0.15rem !important;
   }
 
   .sort-select-box {
-    min-width: 130px;
+    width: 100% !important;
+    min-width: 0 !important;
+    flex: 1 !important;
   }
 
   .sort-select {
-    padding: 0.45rem 1.6rem 0.45rem 0.6rem;
-    font-size: 0.75rem;
+    width: 100% !important;
+    padding: 0.45rem 1.8rem 0.45rem 0.65rem !important;
+    font-size: 0.78rem !important;
+    box-sizing: border-box !important;
   }
 
   .sort-select-box svg {
-    right: 0.55rem;
-    width: 12px;
-    height: 12px;
+    right: 0.55rem !important;
+    width: 12px !important;
+    height: 12px !important;
   }
 
-  /* Products Grid on Mobile: Clean 2 Columns */
+  /* Products Grid on Mobile: Clean Balanced 2 Columns */
   .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.65rem;
-    margin-bottom: 2.5rem;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.65rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 0 0.5rem !important;
+    margin-bottom: 3.5rem !important;
   }
 
   .product-card {
-    padding: 0.65rem;
-    border-radius: var(--radius-sm);
+    padding: 0.6rem !important;
+    border-radius: var(--radius-sm) !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .card-header-bar {
-    margin-bottom: 0.45rem;
+    margin-bottom: 0.4rem !important;
   }
 
   .card-badge {
-    font-size: 0.62rem;
-    padding: 0.12rem 0.45rem;
-    max-width: 75%;
+    font-size: 0.62rem !important;
+    padding: 0.12rem 0.42rem !important;
+    max-width: 75% !important;
   }
 
   .card-wishlist-btn {
-    width: 26px;
-    height: 26px;
+    width: 26px !important;
+    height: 26px !important;
   }
 
   .card-image-wrapper {
-    aspect-ratio: 1 / 1;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
+    aspect-ratio: 1 / 1 !important;
+    width: 100% !important;
+    padding: 0.45rem !important;
+    margin-bottom: 0.45rem !important;
+    box-sizing: border-box !important;
   }
 
   .card-size-tag {
-    bottom: 4px;
-    left: 4px;
-    font-size: 0.6rem;
-    padding: 0.08rem 0.35rem;
+    bottom: 4px !important;
+    left: 4px !important;
+    font-size: 0.58rem !important;
+    padding: 0.08rem 0.32rem !important;
   }
 
   .card-brand-label {
-    font-size: 0.65rem;
-    margin-bottom: 0.15rem;
+    font-size: 0.65rem !important;
+    margin-bottom: 0.15rem !important;
   }
 
   .card-product-title {
-    font-size: 0.8rem;
-    height: 2.1rem;
-    line-height: 1.25;
-    margin-bottom: 0.35rem;
+    font-size: 0.8rem !important;
+    height: 2.1rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.35rem !important;
   }
 
   .card-notes-list {
-    display: none;
+    display: none !important;
   }
 
   .card-footer-box {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.4rem;
-    padding: 0.5rem 0.25rem 0.1rem;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.4rem !important;
+    padding: 0.45rem 0.15rem 0.1rem !important;
   }
 
   .card-price-container {
-    justify-content: space-between;
+    justify-content: space-between !important;
+    width: 100% !important;
   }
 
   .price-val {
-    font-size: 1.15rem;
+    font-size: 1.15rem !important;
   }
 
   .price-currency-lbl {
-    font-size: 0.65rem;
+    font-size: 0.65rem !important;
   }
 
   .btn-card-order-messenger {
-    justify-content: center;
-    padding: 0.42rem 0.6rem;
-    font-size: 0.75rem;
+    width: 100% !important;
+    justify-content: center !important;
+    padding: 0.42rem 0.6rem !important;
+    font-size: 0.75rem !important;
+    box-sizing: border-box !important;
   }
 
   /* Quick View Modal on Mobile */
   .modal-content-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
   .modal-image-col {
-    padding: 1rem;
-    border-left: none;
-    border-bottom: 1px solid var(--border-subtle);
+    padding: 1rem !important;
+    border-left: none !important;
+    border-bottom: 1px solid var(--border-subtle) !important;
   }
 
   .modal-perfume-img {
-    max-height: 180px;
+    max-height: 180px !important;
   }
 
   .modal-info-col {
-    padding: 1rem;
+    padding: 1rem !important;
   }
 
   .modal-title {
-    font-size: 1.15rem;
+    font-size: 1.15rem !important;
   }
 
-  /* Mobile Bottom Nav */
+  /* Native Bottom-Sheet Wishlist Modal for Mobile (100% Width & 85vh) */
+  .drawer-backdrop {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: 300 !important;
+  }
+
+  .drawer-panel {
+    position: fixed !important;
+    top: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 85vh !important;
+    max-height: 85vh !important;
+    border-radius: 20px 20px 0 0 !important;
+    border: 1px solid var(--border-active) !important;
+    border-bottom: none !important;
+    transform: translateY(105%) !important;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.75) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    z-index: 310 !important;
+  }
+
+  .drawer-backdrop.open .drawer-panel {
+    transform: translateY(0) !important;
+  }
+
+  .drawer-header {
+    padding: 1rem 1.15rem !important;
+  }
+
+  .drawer-items-list {
+    padding: 0.75rem 1rem !important;
+  }
+
+  .drawer-footer {
+    padding: 1rem 1.15rem !important;
+  }
+
+  /* Mobile Bottom Nav: Fixed 4 Equal Columns (25% each) */
   .mobile-bottom-nav {
-    display: flex;
+    display: flex !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    height: 60px !important;
+    background: var(--bg-glass) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-top: 1px solid var(--border-subtle) !important;
+    z-index: 250 !important;
+    padding: 0 !important;
+    padding-bottom: env(safe-area-inset-bottom, 0px) !important;
+    box-sizing: border-box !important;
+  }
+
+  .bottom-nav-item {
+    flex: 1 1 0 !important;
+    width: 25% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.15rem !important;
+    color: var(--text-muted) !important;
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    padding: 0.25rem 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+  }
+
+  .bottom-nav-item svg {
+    width: 20px !important;
+    height: 20px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .bottom-nav-item.active {
+    color: var(--gold-primary) !important;
   }
 
   /* Footer on Mobile */
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
   }
 
   .footer-bottom-bar {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+    text-align: center !important;
   }
 }
 

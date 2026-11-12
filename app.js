@@ -542,17 +542,22 @@ document.addEventListener("DOMContentLoaded", () => {
     `).join("");
   }
 
-  openWishlistBtn.addEventListener("click", () => {
+  function openWishlistDrawer() {
     renderWishlistDrawer();
     wishlistDrawer.classList.add("open");
-  });
+    document.body.style.overflow = "hidden";
+  }
 
-  drawerCloseBtn.addEventListener("click", () => {
+  function closeWishlistDrawer() {
     wishlistDrawer.classList.remove("open");
-  });
+    document.body.style.overflow = "";
+  }
+
+  openWishlistBtn.addEventListener("click", openWishlistDrawer);
+  drawerCloseBtn.addEventListener("click", closeWishlistDrawer);
 
   wishlistDrawer.addEventListener("click", (e) => {
-    if (e.target === wishlistDrawer) wishlistDrawer.classList.remove("open");
+    if (e.target === wishlistDrawer) closeWishlistDrawer();
   });
 
   // Bulk Wishlist Checkout to Messenger
@@ -629,20 +634,24 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
 
     quickviewModal.classList.add("open");
+    document.body.style.overflow = "hidden";
   };
 
-  modalCloseBtn.addEventListener("click", () => {
+  function closeQuickView() {
     quickviewModal.classList.remove("open");
-  });
+    document.body.style.overflow = "";
+  }
+
+  modalCloseBtn.addEventListener("click", closeQuickView);
 
   quickviewModal.addEventListener("click", (e) => {
-    if (e.target === quickviewModal) quickviewModal.classList.remove("open");
+    if (e.target === quickviewModal) closeQuickView();
   });
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
-      quickviewModal.classList.remove("open");
-      wishlistDrawer.classList.remove("open");
+      closeQuickView();
+      closeWishlistDrawer();
     }
   });
 
@@ -703,8 +712,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   mobileNavWishlist.addEventListener("click", () => {
-    renderWishlistDrawer();
-    wishlistDrawer.classList.add("open");
+    openWishlistDrawer();
+    setActiveBottomNav(mobileNavWishlist);
   });
 
   function setActiveBottomNav(activeItem) {
@@ -722,6 +731,57 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // --- 15. Intelligent Device Detection & Responsive Engine ---
+  function initDeviceDetection() {
+    const savedMode = localStorage.getItem("rouh_device_mode"); // "mobile", "desktop", or null (auto)
+
+    function applyDeviceMode() {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const isMobileUA = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile|mobile|CriOS/i.test(userAgent);
+      const isSmallScreen = window.innerWidth <= 768;
+      
+      let effectiveMobile = isMobileUA || isSmallScreen;
+      if (savedMode === "mobile") effectiveMobile = true;
+      if (savedMode === "desktop") effectiveMobile = false;
+
+      if (effectiveMobile) {
+        document.documentElement.classList.add("is-mobile-device");
+        document.body.classList.add("is-mobile-device");
+        document.documentElement.classList.remove("is-desktop-device");
+        document.body.classList.remove("is-desktop-device");
+      } else {
+        document.documentElement.classList.add("is-desktop-device");
+        document.body.classList.add("is-desktop-device");
+        document.documentElement.classList.remove("is-mobile-device");
+        document.body.classList.remove("is-mobile-device");
+      }
+
+      const deviceToggleBtn = document.getElementById("device-mode-toggle");
+      if (deviceToggleBtn) {
+        const textSpan = deviceToggleBtn.querySelector(".device-mode-text");
+        if (textSpan) {
+          textSpan.textContent = effectiveMobile ? "عرض الموبايل (اضغط للتبديل للكمبيوتر 💻)" : "عرض الكمبيوتر (اضغط للتبديل للموبايل 📱)";
+        }
+      }
+    }
+
+    applyDeviceMode();
+    window.addEventListener("resize", applyDeviceMode, { passive: true });
+    window.addEventListener("orientationchange", applyDeviceMode, { passive: true });
+
+    // Device Mode Toggle Button
+    const deviceToggleBtn = document.getElementById("device-mode-toggle");
+    if (deviceToggleBtn) {
+      deviceToggleBtn.addEventListener("click", () => {
+        const currentIsMobile = document.body.classList.contains("is-mobile-device");
+        const newMode = currentIsMobile ? "desktop" : "mobile";
+        localStorage.setItem("rouh_device_mode", newMode);
+        applyDeviceMode();
+        showToast(newMode === "mobile" ? "📱 تم تفعيل عرض الموبايل المخصص" : "💻 تم تفعيل عرض الكمبيوتر الكامل");
+      });
+    }
+  }
+
   // Helper Escape HTML
   function escapeHtml(str) {
     if (!str) return "";
@@ -734,6 +794,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // --- Initialize Everything ---
+  initDeviceDetection();
   initTheme();
   startTickerAuto();
   updateCategoryCounts();
